@@ -55,3 +55,7 @@ Se unificó la paleta de gráficas, indicadores y proceso. FB azul (#7FA9F5), FB
 La actualización visual pasó las 72 pruebas existentes en 40.00 s. Tras añadir el dictamen descargable, los 21 casos de interfaz pasaron de nuevo en 43.16 s. Las ecuaciones, parámetros y resultados numéricos del banco no fueron modificados por el cambio de presentación. Se revisaron visualmente colores, nivel del tanque, marcas de consigna y conexiones de las bombas.
 
 docs/DICTAMEN_REPLICACION.md contiene la matriz de alcance para el docente. La conclusión es reproducción metodológica verificable con supuestos declarados; no certificación de igualdad numérica con experimentos originales sin disponer de datos y código de los autores.
+
+El ZIP de la actualización visual fue extraído en una carpeta nueva y aprobó las 72 pruebas en 51.08 s (junit-zip-visual.xml), con las mismas dependencias ya instaladas. No se alteraron los modelos para mejorar artificialmente la coincidencia con los resultados del artículo.
+
+La actualización visual del commit f2aae2a se verificó en la URL pública. Streamlit quedó temporalmente en aprovisionamiento; tras un reinicio autorizado expresamente por el usuario volvió a abrir con la paleta y diagrama nuevos. Se inspeccionaron el banco completo y los indicadores, y se guardó diseno-profesional-publicado.jpg como evidencia. Esta verificación acredita disponibilidad y presentación, no equivalencia con series experimentales originales.
