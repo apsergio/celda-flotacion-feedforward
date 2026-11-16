@@ -1,64 +1,92 @@
-# Modelo, metodología y trazabilidad
+# Metodología ampliada · versión 2
 
-Fuente principal: P. Quintanilla, D. Navia, F. Moreno, S. J. Neethling y P. R. Brito-Parada, «A methodology to implement a closed-loop feedback-feedforward level control in a laboratory-scale flotation bank using peristaltic pumps», MethodsX 10 (2023), 102081. DOI: https://doi.org/10.1016/j.mex.2023.102081. Licencia CC BY 4.0. Se revisaron las 15 páginas. La aplicación es una simulación independiente y no fue validada por los autores.
+Fuente: P. Quintanilla, D. Navia, F. Moreno, S. J. Neethling y P. R. Brito-Parada, MethodsX 10 (2023), 102081. **A methodology to implement a closed-loop feedback-feedforward level control in a laboratory-scale flotation bank using peristaltic pumps**. DOI https://doi.org/10.1016/j.mex.2023.102081. Artículo CC BY 4.0. Aplicación educativa independiente, no avalada por los autores.
 
-## Parámetros publicados
+Se revisaron las 15 páginas del PDF y se inspeccionaron visualmente las figuras 8,9,11,12 y Tabla 2 a mayor resolución. La versión anterior se conserva en Git (`v1-control-nivel`) y en METODOLOGIA_V1.md como documentación histórica.
 
-| Componente | Valor / implementación | Fuente |
+## Procedencia y trazabilidad
+
+- **Publicado:** tablas, ecuaciones rotuladas y valores IAE de las figuras. No son series originales recuperadas.
+- **Digitalizado aproximado:** puntos leídos visualmente de Fig. 12; una sola curva visible por celda, sin fabricar repeticiones.
+- **Sintético:** modelos y ruido calculados con semilla reproducible, nunca atribuidos a mediciones de los autores.
+- **Propio:** observaciones introducidas por el docente. Se conserva su procedencia declarada, sin certificar cómo se obtuvieron.
+
+| Componente | Fuente | Implementación |
 |---|---|---|
-| Topología | T-1 → P-4 → C-1 → P-1 → C-2 → P-2 → C-3 → P-3 → T-1; concentrados al tanque | pp. 2–5, Figs. 1–4 |
-| Geometría | Cada celda: 300 × 300 × 450 mm; T-1: 130 L | p. 2, Fig. 2 p. 4 |
-| Bombas | Masterflex L/S 77916–10, 0–600 rpm | Tabla 1, p. 4 |
-| Sensores | Flotador con sensor óptico; rango indicado 0–39 cm | pp. 2, 6–10, Fig. 11 |
-| Ganancia k′ | −0.001018 cm/s por L/min, las tres celdas | Tabla 2, p. 12 |
-| Retardo θ | 7, 6, 3 s | Tabla 2 |
-| Kc final | −62, −76, −85 L/min/cm | Tabla 2 |
-| Ti final | 56, 30, 44 s | Tabla 2 |
-| Kff | 0.8, 0.8, 1.0 | p. 12, Ecs. 7–8 |
-| PI | e = SP − PV; u = Kc(e + integral(e)/Ti) + Kff ΔQ | Ecs. 1 y 7 |
-| ΔQ | Qd[k] − Qd[k−1], NO caudal absoluto | Ec. 8 |
-| Muestreo / duración | 1 s / 15 min | p. 13 |
-| Filtro | Mediana de ventana 10 s | p. 13 |
-| IAE | Integral de valor absoluto del error | Ec. 9, p. 13 |
-| Aire / alimentación | 47 L/min aire por celda; alimentación 45 L/min | pp. 13–14 |
+| Banco y retorno de concentrados | pp. 2–5, Figs. 1–4 | Proceso con balance cerrado |
+| Celdas 30×30×45 cm, A=0.09 m²; T-1=130 L | p. 2, Fig. 2 p. 4 | Auditoría y alternativa geométrica |
+| Bombas: registros, 10 s y triplicados | p. 7, Fig. 9 p. 9 | Tabla/CSV, ajuste, residuos y estadística |
+| Sensores 0–39 cm, descensos ~2 cm | pp. 6–10, Figs. 10–11 | Ajustes individuales LI-1/2/3 |
+| Aire: lectura y salida | pp. 6–8, Fig. 8 | FIC-1/2/3 y velocidad superficial jg |
+| INT 0–32767 y 4–20 mA | pp. 2,6–7 | Cadena ideal, cuantización y saturación |
+| Identificación de k′ y θ | pp. 10–12, Fig. 12, Ec. 5 | Escalones, dos puntos, tres ensayos o importación |
+| SIMC | Ecs. 2–6, pp. 8,10 | Calculadora, restricciones y alternativas PI |
+| Modelos y PI finales | Tabla 2 p. 12 | k′=−0.001018; θ=(7,6,3); Kc=(−62,−76,−85); Ti=(56,30,44) |
+| Feedforward | Ecs. 7–8, Fig. 13 p. 12 | Kff=(0.8,0.8,1), diferencia entre muestras |
+| Primer orden | Ec. 4, Ecs. 10–15 p. 14 | Modelo independiente con respuesta analítica |
+| 15 min, 1 s, mediana 10 muestras | p. 13 | Comparación dedicada y filtrado documentado |
+| IAE y resultados publicados | Ec. 9, Fig. 14 p. 13 | Métricas reales/medidas/filtradas y panel experimental separado |
+| Reactivos y tiempos | pp. 4–6,13 | Asistente de nueve etapas |
 
-## Balance y dos opciones de modelo
+## Calibración
 
-Se integran volúmenes de líquido a pasos de 1 s:
+Ecuaciones transcritas de las figuras, con su precisión gráfica publicada:
 
-V_i[k+1] = V_i[k] + (Q_in,i − Q_out,i − Q_conc,i)/60.
+| Instrumento | Ecuación rotulada | Salida |
+|---|---|---|
+| P-4 | Q=0.0035 N | L/min |
+| P-1 | Q=0.0029 N | L/min |
+| P-2, P-3 | Q=0.0033 N | L/min |
+| LI-1 | h=−0.0018 N+40.1363 | cm |
+| LI-2 | h=−0.0019 N+43.8823 | cm |
+| LI-3 | h=−0.0020 N+41.293 | cm |
+| Aire, lectura | Qair=0.0032 N | L/min |
+| Aire, salida | Qair=0.0031 N | L/min |
 
-V_T[k+1] = V_T[k] + (Q_out,3 + suma(Q_conc) − Q_feed)/60.
+N es el valor del registro INT. Los tres controladores de aire se declaran iguales en el artículo, pero los ajustes propios se guardan individualmente. Los coeficientes anteriores están redondeados y no constituyen nuevas mediciones digitalizadas.
 
-Q_in = (Q_feed, Q_out,1, Q_out,2). Todos los caudales están en L/min, volúmenes en L, niveles en cm y tiempos en s. Cada salida real se usa una única vez y simultáneamente como entrada de la celda siguiente. Los retardos de la Tabla 2 se representan como colas de órdenes de cada bomba. Esa ubicación física del retardo es un supuesto de implementación: el artículo identifica un retardo del proceso, sin descomponer sensor, bomba y transporte.
+Para bombas: Q=60V/Δt con V en L, Δt=10 s por defecto y registros 5000,10000,20000,25000,28000. Se ajustan todas las observaciones, con opción de intercepto libre o cero; se muestran pendiente, intercepto, R² centrado, RMSE, residuos y media/DE muestral por punto (`ddof=1`). Se comprueba el triplicado y se rechazan identificadores repetidos. Sin observaciones, una recta publicada no recibe R² o intervalos inventados.
 
-**Opción Tabla 2 (predeterminada):** V_i = C_eff h_i, C_eff = 1/(60 × 0.001018) = aproximadamente 16.37 L/cm. Así la derivada local respecto al caudal de salida coincide con la función integradora publicada, Gp = −0.001018 exp(−θs)/s. Es un inventario efectivo matemático, NO el volumen geométrico del equipo. La aparente capacidad de estas celdas supera la geometría real y no debe usarse para dimensionamiento físico.
+El intervalo de predicción OLS 95% usa distribución t y n−p grados de libertad; presupone errores independientes, normales y de varianza constante. En sensores hay error en el eje de registro: OLS es aproximación docente, no certificación metrológica. La leyenda de Fig. 11 dice intercepto fijado en cero, pero las ecuaciones visibles tienen intercepto no nulo: se muestra la contradicción. El rango nominal 0–39 cm no implica validación experimental completa de la figura; las extrapolaciones se advierten.
 
-**Opción geométrica:** V_i = 0.9 h_i, a partir del área de 900 cm². La ganancia resultante es −1/(60 × 0.9) = −0.0185185 cm/s por L/min, aproximadamente 18.2 veces la ganancia publicada. Se mantienen los PI de la Tabla 2 para mostrar la sensibilidad, lo que puede generar oscilaciones fuertes. No es posible imponer simultáneamente ambos valores sin una conversión o física adicional no publicada.
+## Identificación y SIMC
 
-Las Ecs. 4 y 10–15 presentan una aproximación de primer orden autorregulada, mientras la Tabla 2 da explícitamente un integrador con retardo. Se usa la Tabla 2 porque corresponde a los parámetros finales del experimento; no se inventa una constante de autorregulación.
+La planta individual integradora usa dy/dt=k′u(t−θ), en desviaciones respecto al punto inicial. Su entrada se mantiene constante y el escalón modifica la salida; no se aplica recirculación simultánea en este ensayo individual. Hay tres repeticiones sintéticas con ruido de semilla fija, o se importan las repeticiones existentes sin fabricar otras. Si un ensayo geométrico sale de 0–45 cm, se rechaza sin recortar la curva.
 
-## Control discreto
+k′=(y2−y1)/[(t2−t1)Δu]. La estimación de θ prolonga la recta entre los puntos hasta la mediana de las muestras de los 10 s previos al escalón. Depende de ruido, selección y estabilidad de la línea base; no es un identificador universal. Se marcan retardos extrapolados inválidos y se permite aceptar θ por inspección. El banco usa un retardo entero ≥1 s, redondeado explícitamente.
 
-PI posicional: u[k] = Q0 + Kc e[k] + I[k] + FF[k], I[k] = I[k−1] + Kc/Ti × e[k] × 1 s. El sesgo Q0 mantiene el equilibrio inicial y es un supuesto necesario para una formulación en variables de desviación. Se aplican límites 0–Qmax y anti-windup mediante integración condicional, añadido de ingeniería no especificado en el artículo. No se limita la velocidad de cambio, conforme a p. 14.
+SIMC: Kc=1/[k′(τc+θ)], Ti=min{τ1,4(τc+θ)}. En el límite integrador τ1→∞ se obtiene Ti=4(τc+θ). También puede explorarse τ1 finito. Se evalúan por separado τc≥θ y Ti≥4(τc+θ), según el texto; una contradicción con la operación min se informa.
 
-La modalidad predeterminada implementa literalmente FF[k] = Kff (Qin[k] − Qin[k−1]). Un escalón produce una contribución de una sola muestra. No se acumula esa contribución a escondidas. La opción «reference» es una variante pedagógica explícita: FF = Kff(Qin[k] − Qin[0]); no se atribuye a las Ecs. 7–8. El filtro es una mediana causal con 10 muestras inicializadas al nivel inicial; MATLAB medfilt1 puede usar otra convención de bordes/centrado, no especificada para implementación en línea.
+Tabla 2 se conserva sin cambios. Para celda 3, k′=−0.001018, θ=3 y τc=8 dan Kc≈−89.30 y Ti=44 bajo el límite integrador, mientras la tabla rotula iniciales −78.1 y 52. Los Ti finales de celdas 2 y 3 tampoco cumplen esa cota usando los τc tabulados. Se muestran las diferencias; los finales publicados no se sustituyen por los iniciales. La comparación de τc usa la misma planta en ambos controladores. Guardar/aplicar un PI alternativo es explícito.
 
-El IAE mostrado integra el error del nivel físico con trapecios, incluyendo los saltos de SP en la malla de 1 s. Los gráficos muestran PV filtrado. Los CSV permiten recalcular también el IAE de PV. No se asume que una estrategia siempre mejora: cada resultado se calcula y se informa con su signo.
+## Dos modelos independientes
 
-## Supuestos y datos ausentes
+Integrador, Tabla 2: dy/dt=k′u(t−θ); con condiciones iniciales nulas en desviaciones, sY=k′e^(−θs)U y G=k′e^(−θs)/s. Un escalón genera rampa después del retardo.
 
-- Nivel inicial 25 cm; inventario inicial T-1 100 L; escalón de SP +1 cm en C-1 a 450 s y perturbación +8 L/min a 180 s son escenarios didácticos, no la secuencia exacta de Fig. 14.
-- Concentrado líquido constante por celda: 0.2 L/min editable, sin cinética de espuma ni recuperación mineral. El experimento es bifásico agua/aire sin sólidos. El aire se considera constante a 47 L/min; no se modelan holdup ni compresibilidad.
-- Qmax = 100 L/min editable: límite supuesto; 600 rpm es publicado, pero NO equivale a 100 L/min. No se presentan rpm ni bits sintéticos como calibrados. Fig. 9 proporciona curvas, pero no se transcriben coeficientes con precisión no disponible.
-- Se impide retirar más líquido del disponible y se retorna desborde de celda a T-1. El cálculo se detiene si T-1 supera 130 L, con explicación en pantalla. No se pierde masa por recorte silencioso.
-- No hay ruido ni deriva de sensor por defecto. Sensores, tuberías y bombas se representan funcionalmente; no se simulan PLC, electricidad, cámaras ni propiedades mecánicas.
-- Los autores indican en p. 15 que los datos se facilitan bajo solicitud. No se cuenta con las series originales ni con el código MATLAB. No se afirma reproducir numéricamente los IAE experimentales ni validar contra datos medidos.
+Primer orden, Ecs. 10–15: τ1 dy/dt=−y+ku(t−θ); τ1sY=−Y+ke^(−θs)U; G=ke^(−θs)/(τ1s+1). Un escalón converge a kΔu. El artículo no proporciona una pareja independiente (k,τ1) validada: en esta comparación son supuestos editables. Elegir k=k′τ1 iguala la pendiente inicial, no toda la respuesta. El primer orden se estudia por separado y no reemplaza el balance conservativo del banco.
 
-## Procedimiento experimental publicado y alcance
+## Geometría y discrepancia no resuelta
 
-El artículo prepara agua con azul de metileno 10 ppm, MIBC 330 ppm, Flottec F160–10 20 ppm y goma xantana 600 ppm (pp. 4–6). Calibra por triplicado caudales y niveles (pp. 6–10); identifica k′ y θ mediante escalones abiertos y aplica SIMC: Kc = 1/[k′(τc+θ)], Ti = min(τ1,4(τc+θ)), Ecs. 2–6. Los valores finales se ajustan experimentalmente. La aplicación usa esos finales y no realiza una nueva identificación de planta. El artículo menciona SSE en antecedentes, pero compara IAE en los resultados. Se utiliza IAE.
+A=0.09 m²; Vmax=40.5 L; V=0.9h L con h en cm. El balance líquido implica k′=−1/(60×0.9)=−0.0185185 cm/s por L/min. Tabla 2 publica −0.001018, unas 18.19 veces menor. Interpretar esa ganancia como un balance puramente líquido exigiría almacenamiento efectivo 16.37 L/cm o área efectiva ~1.637 m², incompatible con el área geométrica sin escalamiento o física adicional.
 
-La Fig. 14 publica comparaciones experimentales; p. 14 informa mejoras de 33 a 138 cm·s. Estas cifras son del artículo y no se usan como resultados calculados aquí. La evaluación de esta entrega es consistencia matemática, conservación y pruebas de software; no equivalencia experimental.
+Se consultaron la versión editorial, https://pmc.ncbi.nlm.nih.gov/articles/PMC9988547/ y repositorios Imperial/Brunel. La búsqueda por DOI y corrección no aportó una explicación verificable. Error de unidades, calibración o aireación son hipótesis, no hechos implementados. No se modifica arbitrariamente la geometría para forzar coincidencia.
 
-Valores rotulados en Fig. 14 (lectura visual, cm·s): C-1 FB 198 y FB+FF 164; C-2 325 y 187; C-3 260 y 221. No se importan como series ni se ajusta el modelo para forzar su coincidencia.
+Las alternativas son: geometría publicada, parámetros identificados por usuario y parámetros publicados Tabla 2. La última conserva un inventario efectivo matemático para la conservación; **no representa el volumen físico del equipo**.
+
+## Banco, PI, instrumentación y filtro
+
+V_i[k+1]=V_i[k]+(Qin_i−Qout_i−Qconc_i)/60; V_T[k+1]=V_T[k]+(Qout_3+ΣQconc−Qfeed)/60. Caudales L/min, volúmenes L, tiempo s. Las salidas reales alimentan simultáneamente la siguiente celda y todo concentrado vuelve a T-1. Se impide extraer inventario inexistente y el desborde retorna al tanque. Si T-1 supera 130 L, se detiene sin perder masa por recorte silencioso.
+
+PI: u=Q0+Kc e+I+FF; I[k]=I[k−1]+Kc e[k]/Ti; e=SP−PV. Sesgo Q0, límites editables y anti-windup condicional son decisiones de ingeniería añadidas. No hay límite de velocidad de cambio. FF literal=Kff(Qin[k]−Qin[k−1]), Ecs. 7–8; la opción respecto al caudal inicial sigue marcada como extensión pedagógica.
+
+Cadena PLC con ajustes individuales guardados o rectas publicadas: N=round[(I−4)32767/16], I=4+16N/32767; h=aLI N+bLI; NP=(Qorden−bP)/aP; Q=aP NP+bP. Se muestran valores ideales, cuantizados, saturados y escalados. La correspondencia eléctrica lineal es una convención ideal asumida, no emulación de códigos físicos GE. La vista calcula una muestra de PI con integral anterior editable; no se conecta a un PLC. No se inventa la relación bits/rpm a partir del rango 0–600 rpm.
+
+El banco permite ruido gaussiano reproducible; ambas estrategias usan exactamente la misma realización. Mediana causal de N muestras incluida la actual, con relleno inicial al nivel inicial. Para N par se promedian los dos valores centrales. No se afirma equivalencia exacta con medfilt1 ni sus bordes. Se muestran señales real, medida, filtrada, sus errores y sus IAE trapezoidales; el filtro añade retraso y no garantiza mejorar seguimiento.
+
+## Protocolo de Fig. 14 y alcance
+
+El ensayo dedicado fija entrada C-1=45 L/min; entradas C-2/C-3 son los relaves previos, 900 s, 1 s y mediana 10. Sus niveles iniciales y escalones de consigna son didácticos, no las series originales. IAE experimentales rotulados, cm·s: C-1 198/164, C-2 325/187, C-3 260/221 para FB/FB+FF, mostrados separadamente. Fig. 14 ilustra cerca de 600 s aunque el texto declara 15 min; no se inventan datos faltantes. Los autores ofrecen originales bajo solicitud. Importar curvas propias o digitalizadas no equivale a validación experimental contra las series de los autores.
+
+Concentrado constante 0.2 L/min por celda, límite 100 L/min, inventario T-1 inicial 100 L, sesgo, ubicación de retardos y lógica de desborde siguen como supuestos editables. No se simulan holdup, cinética de espuma, recuperación mineral, cámaras o DDE. El aire es constante en el banco; calibración y jg son módulos funcionales separados.
+
+Los ajustes se guardan en sesión: calibraciones→PLC; identificación→planta/SIMC; SIMC→PI alternativo. Los parámetros JSON pueden exportarse/restaurarse y los CSV se descargan con manifiesto de procedencia. No hay persistencia remota de mediciones propias. Las pruebas matemáticas y de interfaz se separan de comprobaciones de transcripción; ninguna sustituye validar una planta física.

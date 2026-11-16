@@ -1,5 +1,11 @@
 # Banco de flotación: Feedback + Feedforward
 
+## Ampliación metodológica · versión 2
+
+La misma aplicación incorpora calibración individual de bombas, sensores y aire; identificación en lazo abierto; calculadora SIMC; comparación de modelos integrador/primer orden; cadena PLC; guía experimental; protocolo inspirado en Fig.14; filtrado e IAE por señal; exportación de resultados y procedencia. Consulte [Manual docente](docs/MANUAL.md), [metodología y límites](docs/METODOLOGIA.md) y [procedencia de digitalizaciones](data/PROCEDENCIA.md).
+
+Se conservan el banco y los controles de la versión 1. La etiqueta Git `v1-control-nivel` permite recuperar la entrega anterior. Los datos propios se procesan en la sesión; expórtelos antes de cerrar. Los modelos sintéticos y las digitalizaciones no equivalen a series experimentales originales.
+
 Simulación científica educativa basada en Quintanilla et al., MethodsX (2023), DOI 10.1016/j.mex.2023.102081. Interfaz en español, tres celdas, tanque de retorno, cuatro bombas, PI publicados, retardos, perturbaciones, comparación e IAE.
 
 Aplicación pública: https://celda-flotacion-feedforward.streamlit.app/

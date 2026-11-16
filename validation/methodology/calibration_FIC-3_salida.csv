@@ -1,0 +1,19 @@
+bits,repeat,q_L_min,source,instrument,reference,direction,slope_calculated,intercept_calculated
+1000.0,1,2.9413755049684203,Sintéticos de demostración,FIC-3,https://doi.org/10.1016/j.mex.2023.102081,salida,0.003100381535800687,0.0
+1000.0,2,3.148114256707655,Sintéticos de demostración,FIC-3,https://doi.org/10.1016/j.mex.2023.102081,salida,0.003100381535800687,0.0
+1000.0,3,2.7207347300801867,Sintéticos de demostración,FIC-3,https://doi.org/10.1016/j.mex.2023.102081,salida,0.003100381535800687,0.0
+5000.0,1,15.779154342021739,Sintéticos de demostración,FIC-3,https://doi.org/10.1016/j.mex.2023.102081,salida,0.003100381535800687,0.0
+5000.0,2,15.627658948185642,Sintéticos de demostración,FIC-3,https://doi.org/10.1016/j.mex.2023.102081,salida,0.003100381535800687,0.0
+5000.0,3,15.441590502956128,Sintéticos de demostración,FIC-3,https://doi.org/10.1016/j.mex.2023.102081,salida,0.003100381535800687,0.0
+10000.0,1,30.937610134361964,Sintéticos de demostración,FIC-3,https://doi.org/10.1016/j.mex.2023.102081,salida,0.003100381535800687,0.0
+10000.0,2,31.060767073555763,Sintéticos de demostración,FIC-3,https://doi.org/10.1016/j.mex.2023.102081,salida,0.003100381535800687,0.0
+10000.0,3,30.94646793955913,Sintéticos de demostración,FIC-3,https://doi.org/10.1016/j.mex.2023.102081,salida,0.003100381535800687,0.0
+15000.0,1,46.454818227767355,Sintéticos de demostración,FIC-3,https://doi.org/10.1016/j.mex.2023.102081,salida,0.003100381535800687,0.0
+15000.0,2,46.644013564001824,Sintéticos de demostración,FIC-3,https://doi.org/10.1016/j.mex.2023.102081,salida,0.003100381535800687,0.0
+15000.0,3,46.60294104115476,Sintéticos de demostración,FIC-3,https://doi.org/10.1016/j.mex.2023.102081,salida,0.003100381535800687,0.0
+20000.0,1,61.987174412873166,Sintéticos de demostración,FIC-3,https://doi.org/10.1016/j.mex.2023.102081,salida,0.003100381535800687,0.0
+20000.0,2,61.982904687362826,Sintéticos de demostración,FIC-3,https://doi.org/10.1016/j.mex.2023.102081,salida,0.003100381535800687,0.0
+20000.0,3,62.03218326453313,Sintéticos de demostración,FIC-3,https://doi.org/10.1016/j.mex.2023.102081,salida,0.003100381535800687,0.0
+24000.0,1,74.27719632109621,Sintéticos de demostración,FIC-3,https://doi.org/10.1016/j.mex.2023.102081,salida,0.003100381535800687,0.0
+24000.0,2,74.31924994706874,Sintéticos de demostración,FIC-3,https://doi.org/10.1016/j.mex.2023.102081,salida,0.003100381535800687,0.0
+24000.0,3,74.50965203604127,Sintéticos de demostración,FIC-3,https://doi.org/10.1016/j.mex.2023.102081,salida,0.003100381535800687,0.0
