@@ -9,6 +9,7 @@ from presentation import install_visual_theme, COLORS
 st.set_page_config(page_title='Flotation Lab | Control de nivel',page_icon='🫧',layout='wide')
 install_visual_theme()
 st.caption('LABORATORIO VIRTUAL · METHODSX 102081 · 2023')
+st.caption('Entrega final auditada · 2026-11-16')
 st.title('Banco de flotación')
 st.write('Control de nivel con bombas peristálticas · Feedback y Feedforward')
 st.caption('● Azul: Feedback   ·   ● Verde agua: Feedback + Feedforward   ·   ● Ámbar: consigna. Las curvas también se identifican por nombre y tipo de línea.')
@@ -92,7 +93,9 @@ def diagram(row):
 def playback():
     if st.session_state.running:
         st.session_state.cursor=min(duration,st.session_state.cursor+20)
-        if st.session_state.cursor==duration: st.session_state.running=False
+        if st.session_state.cursor==duration:
+            st.session_state.running=False
+            st.rerun()
     cursor=st.session_state.cursor
     selected=data[data['mode']==mode].iloc[cursor]
     st.progress(cursor/duration,text=f'Tiempo simulado: {cursor} / {duration} s · {mode}')
@@ -126,4 +129,4 @@ with tab2:
     st.download_button('Descargar parámetros del escenario',signature,'escenario.txt')
     st.download_button('Descargar escenario reproducible JSON',__import__('json').dumps(asdict(c),ensure_ascii=False,indent=2),'escenario.json','application/json')
 with tab3:
-    st.markdown(Path('docs/METODOLOGIA.md').read_text(encoding='utf-8'))
+    st.markdown((Path(__file__).resolve().parent/'docs/METODOLOGIA.md').read_text(encoding='utf-8'))

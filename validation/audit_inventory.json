@@ -1,0 +1,308 @@
+{
+  "schema": 1,
+  "file_count": 55,
+  "files": [
+    {
+      "file": ".gitignore",
+      "bytes": 73,
+      "sha256": "653a8b85ef91ff2ec232de92fd31acd641fdd9baed9a5e2a589f266b290da32e"
+    },
+    {
+      "file": ".streamlit/config.toml",
+      "bytes": 180,
+      "sha256": "755414f5b4a2fb1a93746a2867cd4e523f66c63a28e6eabcc24bf51c4a46bd9e"
+    },
+    {
+      "file": "app.py",
+      "bytes": 10604,
+      "sha256": "eac04e31226b8b921c779dad947f92cd0d35a24cc9be5ae6cf760fbcfecf4312"
+    },
+    {
+      "file": "audit_delivery.py",
+      "bytes": 3406,
+      "sha256": "2b117467911944a44cd9532e3112218317a8e4566f5a143d04e9dcf2c2af9c89"
+    },
+    {
+      "file": "data/fig12_digitized.csv",
+      "bytes": 2277,
+      "sha256": "c354f134e90ced9b2171fa59528480776fa9b330bd8be1c269edaac83e385349"
+    },
+    {
+      "file": "data/PROCEDENCIA.md",
+      "bytes": 1326,
+      "sha256": "de5c8c261a6ac5e3bc73059b54c1b11dc385194a353dfc83e13635b97a0a77f6"
+    },
+    {
+      "file": "docs/AUDITORIA_FINAL.md",
+      "bytes": 4487,
+      "sha256": "e014ad1fbf5553d685ac21f1f65203b6e4d67e4543cece22818a0a60f538c41d"
+    },
+    {
+      "file": "docs/DICTAMEN_REPLICACION.md",
+      "bytes": 3435,
+      "sha256": "1accdea8e42b007585151a8f26aed584b4c040ce483179a897155e55ce4a6bbb"
+    },
+    {
+      "file": "docs/MANUAL.md",
+      "bytes": 4282,
+      "sha256": "788f66bd17f07e30d33a69b689d3d287160c0e34467d45b018aa4a78f5f35ef4"
+    },
+    {
+      "file": "docs/METODOLOGIA.md",
+      "bytes": 10521,
+      "sha256": "243af32bfc97413701fea70a22cf3e3a5ccd4fb4e63e6b742c84d7ff77dfd386"
+    },
+    {
+      "file": "docs/METODOLOGIA_V1.md",
+      "bytes": 7011,
+      "sha256": "6933d2abdbd86f64acff3670d3e0f70122041765ef742cccb0eaeec573b37ced"
+    },
+    {
+      "file": "LICENSE",
+      "bytes": 874,
+      "sha256": "4f63ca95c2835f014862d94796dab6a65ef1534a0c644d94d2eab1c3546ea2ad"
+    },
+    {
+      "file": "methodology.py",
+      "bytes": 9420,
+      "sha256": "9a9ff248bd214ea4737137ad3b6c23f0eb59eb32b3f3f3480e8ddca2c507af78"
+    },
+    {
+      "file": "model.py",
+      "bytes": 5915,
+      "sha256": "51227c18f998920a9b5cb02b20d177501c9440f58ab828d14c489c68ee86adde"
+    },
+    {
+      "file": "presentation.py",
+      "bytes": 2807,
+      "sha256": "5cbe0de253dae8dc10cb07c78bf34ad6bc33ca7d6304b964d7dec112da9ec742"
+    },
+    {
+      "file": "README.md",
+      "bytes": 4685,
+      "sha256": "b74825afbfdaa89cfaba80b962c94e5267badf9aa9e37a28c0096ad3ae0a943f"
+    },
+    {
+      "file": "requirements-lock.txt",
+      "bytes": 758,
+      "sha256": "97da2cbf0ff72b679b30b2cdab0aa22768bd930c043535e3a81538d575200e1a"
+    },
+    {
+      "file": "requirements.txt",
+      "bytes": 91,
+      "sha256": "145eceda7e16e4e957dce2515ed3fc2c2f2b9a57bbd826b2ca2e33d0d0e7578c"
+    },
+    {
+      "file": "tests/test_delivery.py",
+      "bytes": 2949,
+      "sha256": "5b1d86a80924984183357cf4fec58dc49b83149f75a35b9873dc09a5b0695211"
+    },
+    {
+      "file": "tests/test_methodology.py",
+      "bytes": 7431,
+      "sha256": "696a33dab3b017e39fc916291cb39ad85dc7381064ae35b480535d1e4d344b62"
+    },
+    {
+      "file": "tests/test_model.py",
+      "bytes": 2890,
+      "sha256": "e2f563d7eaa29b7d55f41056854fc71d798b148580f2a230689b43373b5dd7ba"
+    },
+    {
+      "file": "tests/test_modules_ui.py",
+      "bytes": 3347,
+      "sha256": "74cf3475eeb8057709e3f1b5bf47f9f74346c71adb939cad51c7396138a359af"
+    },
+    {
+      "file": "ui_modules.py",
+      "bytes": 46506,
+      "sha256": "34d745a2ad9d25b291e5747fbc3d29630803bd6929db3121bc8bb1707acc5209"
+    },
+    {
+      "file": "validate.py",
+      "bytes": 3304,
+      "sha256": "a36215d54cad86f73dd377618f099bb9c097b741c9b6834839fd122e1008e40d"
+    },
+    {
+      "file": "validation/default_comparison.csv",
+      "bytes": 876230,
+      "sha256": "6191f98f62e8eca97c3629eee7e05fa6c29e6cc96bab1cb6425d0b6eae56ae93"
+    },
+    {
+      "file": "validation/INFORME.md",
+      "bytes": 7749,
+      "sha256": "e0e19a15f2355887b2cfba174ae2332040eb7730149e782122c111cf4a3c8cb4"
+    },
+    {
+      "file": "validation/INFORME_FINAL.md",
+      "bytes": 2241,
+      "sha256": "7307ea495c5b5035e6a1e6b1cb27a28c1c89e4ce5ab0d2a66eca320a1aa466fa"
+    },
+    {
+      "file": "validation/junit-auditoria-final.xml",
+      "bytes": 9588,
+      "sha256": "ecd434c2636e4e0620af6a6944f045b2f1cc0a89c30ed3fe739c524403f69f75"
+    },
+    {
+      "file": "validation/junit-v2.xml",
+      "bytes": 8055,
+      "sha256": "35a31ca62496b6afd1302b42527bd903cedbbb655958cc39a7c0782e4bf184a1"
+    },
+    {
+      "file": "validation/junit-zip-v2.xml",
+      "bytes": 8055,
+      "sha256": "03bb7e8752a39104ab217996653294892bedabaa6c89a665538096e6c481c734"
+    },
+    {
+      "file": "validation/junit-zip-visual.xml",
+      "bytes": 8055,
+      "sha256": "ceb8c6b899585f52b275ad3d848827e8a37b62714739a90c07c7941e7fe4d931"
+    },
+    {
+      "file": "validation/methodology/calibration_FIC-1_lectura.csv",
+      "bytes": 2622,
+      "sha256": "baed4a844a320a296086afe9d00f4ee44f32470af45d0c27f6529507f46e259b"
+    },
+    {
+      "file": "validation/methodology/calibration_FIC-1_salida.csv",
+      "bytes": 2586,
+      "sha256": "a967a5b251f64e93e24d778299399b5b6e36b7fe7307d7f77a601ba0b96a58a8"
+    },
+    {
+      "file": "validation/methodology/calibration_FIC-2_lectura.csv",
+      "bytes": 2622,
+      "sha256": "a558fe9f549e7ae2759722e0690e5b459f989c0e9170d291cac64b048ef8d78c"
+    },
+    {
+      "file": "validation/methodology/calibration_FIC-2_salida.csv",
+      "bytes": 2586,
+      "sha256": "09ccf6f99a91f36154343937ee10e5861e9e17a2b3d5cf7d8928e09dc331970a"
+    },
+    {
+      "file": "validation/methodology/calibration_FIC-3_lectura.csv",
+      "bytes": 2622,
+      "sha256": "67429148719e03c39d327043cd52617f4b04a4b122f01f584629ce2be90d820c"
+    },
+    {
+      "file": "validation/methodology/calibration_FIC-3_salida.csv",
+      "bytes": 2586,
+      "sha256": "c41ddb7372c09cb19e45a3a9473cca6232edc8b100420c1cc31da4c748a936da"
+    },
+    {
+      "file": "validation/methodology/calibration_LI-1_lectura.csv",
+      "bytes": 8929,
+      "sha256": "8e7fe294556bca98d8c3aa99ee480457c5d5c8f47e529f488e6111cdc8df91ec"
+    },
+    {
+      "file": "validation/methodology/calibration_LI-2_lectura.csv",
+      "bytes": 8998,
+      "sha256": "8937c5a31a4bcd5bf19411818955b22d4d0f7eecc6c3ef89f4f57c09c87b4475"
+    },
+    {
+      "file": "validation/methodology/calibration_LI-3_lectura.csv",
+      "bytes": 8869,
+      "sha256": "8a0126308191c55b908939858f4a867dfeea0c86c49d505ef22b378ff07be014"
+    },
+    {
+      "file": "validation/methodology/calibration_P-1_lectura.csv",
+      "bytes": 2451,
+      "sha256": "27640bc6af1557954dd952c5f2ed713984c1c4a3e972e71e061c710ab6eebf94"
+    },
+    {
+      "file": "validation/methodology/calibration_P-2_lectura.csv",
+      "bytes": 2453,
+      "sha256": "81db9903fbed21c0d3a03a4f730f2f0c180036a5847dbc8961c5044155a86ebd"
+    },
+    {
+      "file": "validation/methodology/calibration_P-3_lectura.csv",
+      "bytes": 2453,
+      "sha256": "9e948bdeaec03189b891c6496dc87cd0b6fa886c3e3cde0f01e05ca590fc4a6b"
+    },
+    {
+      "file": "validation/methodology/calibration_P-4_lectura.csv",
+      "bytes": 2437,
+      "sha256": "e93831580d3a8e2ad9a54c26065b33b302acbf89ec35c953a8b96de7d49e83db"
+    },
+    {
+      "file": "validation/methodology/fig14_protocol_simulated.csv",
+      "bytes": 1188391,
+      "sha256": "75430b54322209e50e4fbd770140f0a7c6e1f4fb316d76428e3276af8206bd8c"
+    },
+    {
+      "file": "validation/methodology/filtering_signals.csv",
+      "bytes": 132233,
+      "sha256": "f36c1653aee0a57753a8e437d35c6e7095f0a9f750439c314eac9bda256fe3d8"
+    },
+    {
+      "file": "validation/methodology/identified_noiseless.csv",
+      "bytes": 1015,
+      "sha256": "4b3a90b73f0d96d6cb3c470e2f9599411c09d1078d0f0c45613b1b057b4c2c04"
+    },
+    {
+      "file": "validation/methodology/openloop_C1.csv",
+      "bytes": 72724,
+      "sha256": "5732ec3fc70b79cf1dc52cab0c8344a286f6d59aa5aa6a5314c14e372f419c60"
+    },
+    {
+      "file": "validation/methodology/openloop_C2.csv",
+      "bytes": 72748,
+      "sha256": "bcc9ab2076bfaadb8d14bc7a35acb23447f0540216900b25ab3172a575bee516"
+    },
+    {
+      "file": "validation/methodology/openloop_C3.csv",
+      "bytes": 72874,
+      "sha256": "3365e2b1e9dada969651100d51527331545fe40f935d4d65c16a0307a85aa42a"
+    },
+    {
+      "file": "validation/methodology/simc_audit.csv",
+      "bytes": 336,
+      "sha256": "0b7b2b4ab818827d9a254da8bb0e58530f8700575766c1e5b302670040fae43a"
+    },
+    {
+      "file": "validation/methodology/summary.json",
+      "bytes": 669,
+      "sha256": "a0fde629e64397b3a77b460f7463c99ef328dbfaf1a1854eb7e067c558a269ae"
+    },
+    {
+      "file": "validation/metrics.json",
+      "bytes": 345,
+      "sha256": "21948aa03130ecd4f98c960f6bf3f8d25d5405ee5ca98764453d218ff75e3dae"
+    },
+    {
+      "file": "validation/palette_contrast.json",
+      "bytes": 74,
+      "sha256": "30673b5722243f4d19c347ee2336c43c022ed42a42ffdc69a728196833890e6d"
+    },
+    {
+      "file": "validation/pytest.txt",
+      "bytes": 102,
+      "sha256": "4adc07cb01db0c7dec0d539f3cc59a54d827c73226808449ca163759d612235b"
+    }
+  ],
+  "import_roots": [
+    "ast",
+    "collections",
+    "dataclasses",
+    "hashlib",
+    "importlib",
+    "io",
+    "json",
+    "methodology",
+    "model",
+    "numpy",
+    "pandas",
+    "pathlib",
+    "plotly",
+    "presentation",
+    "pytest",
+    "re",
+    "scipy",
+    "streamlit",
+    "sys",
+    "ui_modules",
+    "xml",
+    "zipfile"
+  ],
+  "missing_imports": [],
+  "issues": [],
+  "ok": true
+}

@@ -24,7 +24,6 @@ protobuf==7.36.2
 pyarrow==26.0.1
 pydeck==0.9.3
 Pygments==2.21.0
-PyMuPDF==1.26.6
 pytest==9.2.0
 python-dateutil==4.0.0
 python-multipart==0.0.34

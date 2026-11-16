@@ -177,7 +177,9 @@ def identification():
     def play():
         if st.session_state.ident_running:
             st.session_state.ident_cursor=min(duration,st.session_state.ident_cursor+20)
-            if st.session_state.ident_cursor>=duration: st.session_state.ident_running=False
+            if st.session_state.ident_cursor>=duration:
+                st.session_state.ident_running=False
+                st.rerun()
         cursor=st.session_state.ident_cursor
         st.progress(cursor/duration,text=f'Ensayo: {cursor:g} / {duration:g} s')
         fig=go.Figure()

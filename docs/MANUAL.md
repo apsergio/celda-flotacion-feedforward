@@ -9,9 +9,12 @@ Descomprima el ZIP. Python 3.11 recomendado. Abra terminal donde está app.py:
 
 ```powershell
 python -m venv .venv
-.venv\Scripts\python -m pip install -r requirements.txt
-.venv\Scripts\python -m streamlit run app.py
+.venv\Scripts\activate
+pip install -r requirements.txt
+streamlit run app.py
 ```
+
+La activación indicada corresponde a CMD en Windows. En PowerShell use `.\.venv\Scripts\Activate.ps1`. Si el equipo impide activar scripts, use directamente `.venv\Scripts\python -m pip install -r requirements.txt` y `.venv\Scripts\python -m streamlit run app.py`, sin cambiar la política de seguridad del equipo.
 
 En Linux/macOS use `.venv/bin/python`. `requirements-lock.txt` conserva versiones probadas. Se necesita Internet para instalar; luego el cálculo local no depende del alojamiento público.
 
