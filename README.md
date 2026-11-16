@@ -2,6 +2,9 @@
 
 Simulación científica educativa basada en Quintanilla et al., MethodsX (2023), DOI 10.1016/j.mex.2023.102081. Interfaz en español, tres celdas, tanque de retorno, cuatro bombas, PI publicados, retardos, perturbaciones, comparación e IAE.
 
+Aplicación pública: https://celda-flotacion-feedforward.streamlit.app/
+Repositorio: https://github.com/apsergio/celda-flotacion-feedforward
+
 ## Ejecución local (Python 3.11 recomendado)
 
 Descomprima el ZIP, abra una terminal en la carpeta que contiene app.py y ejecute:

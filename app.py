@@ -61,10 +61,10 @@ def diagram(row):
     parts.append(f'<text x="165" y="165">P-4</text><text x="165" y="185">{row.feed_L_min:.1f}</text></g></svg>')
     return ''.join(parts)
 
-@st.fragment(run_every=.5)
+@st.fragment(run_every=2 if st.session_state.running else None)
 def playback():
     if st.session_state.running:
-        st.session_state.cursor=min(duration,st.session_state.cursor+5)
+        st.session_state.cursor=min(duration,st.session_state.cursor+20)
         if st.session_state.cursor==duration: st.session_state.running=False
     cursor=st.session_state.cursor
     selected=data[data['mode']==mode].iloc[cursor]
