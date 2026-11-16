@@ -9,6 +9,7 @@ import pandas as pd
 import plotly.graph_objects as go
 import streamlit as st
 from model import Config, simulate, compare, KC, TI
+from presentation import semantic_trace_color
 from methodology import (PUBLISHED,PUMP_SLOPES,LEVEL_FITS,AIR_SLOPES,PROVENANCES,SOURCE,
     linear_fit,prediction_interval,triplicates,volume_to_flow,signal_to_register,
     register_to_signal,air_velocity,geometry_audit,simc,step_response,
@@ -21,8 +22,11 @@ MODULES=['Proceso','Calibración','Identificación','Sintonización SIMC','Model
          'Comparación experimental','Filtrado','Resultados y exportación']
 
 def chart(fig,title,x='Tiempo (s)',y='Nivel (cm)'):
-    fig.update_layout(title=title,xaxis_title=x,yaxis_title=y,template='plotly_dark',height=390,
+    fig.update_layout(title=title,xaxis_title=x,yaxis_title=y,template='flotation',height=410,
                       margin=dict(t=50,b=45),legend=dict(orientation='h',y=-.25))
+    for trace in fig.data:
+        color=semantic_trace_color(trace.name)
+        if color and trace.type=='scatter': trace.update(line_color=color,marker_color=color)
     st.plotly_chart(fig,use_container_width=True)
 
 def csv_button(frame,label,name,key=None):
@@ -475,6 +479,10 @@ def filtering():
 
 def export_results():
     st.header('Resultados, parámetros y exportación reproducible')
+    verdict=(ROOT/'docs/DICTAMEN_REPLICACION.md').read_text(encoding='utf-8')
+    with st.expander('Validación para el docente: alcance de la réplica'):
+        st.markdown(verdict)
+    st.download_button('Descargar dictamen de replicación',verdict,'DICTAMEN_REPLICACION.md','text/markdown')
     st.caption('Los datos propios y ajustes se conservan en la sesión del navegador. Exporte antes de cerrar; no hay base de datos ni almacenamiento permanente de mediciones en el servidor.')
     exports=st.session_state.get('exports',{})
     calibrations=st.session_state.get('calibrations',{}); identified=st.session_state.get('identified',{}); tuned=st.session_state.get('tuned',{})

@@ -47,3 +47,11 @@ La versión 1 se conserva mediante etiqueta Git v1-control-nivel y ZIP separado.
 **Aplicación pública ampliada:** verificada en navegador tras publicar el commit 1589e6c. Se observó la navegación de versión 2 y se ejecutó Sintonización SIMC: al cambiar τc de 7 a 14 s, Kc pasó de −70.16559 a −46.77706 L/min/cm y Ti de 56 a 84 s; la gráfica y el IAE alternativo se recalcularon. Captura entregada: ampliacion-metodologica-publicada.jpg. No se atribuye a una prueba manual de cada combinación posible; los 12 módulos y controles descritos se verifican además por AppTest.
 
 El cierre de distribución modifica documentación y añade el informe del ZIP; el código Python del ZIP final se compara por SHA-256 con la copia que pasó las 72 pruebas.
+
+## Actualización visual y dictamen de replicación
+
+Se unificó la paleta de gráficas, indicadores y proceso. FB azul (#7FA9F5), FB+FF verde agua (#35D6BB), SP ámbar (#FFC76A) y fondo de gráfica #0D1B2E. Contraste calculado de líneas sobre ese fondo: 7.332:1, 9.468:1 y 11.233:1; texto principal: 15.517:1. Esta medida no sustituye una auditoría completa de accesibilidad. Los gráficos mantienen nombres de serie y línea discontinua para consigna.
+
+La actualización visual pasó las 72 pruebas existentes en 40.00 s. Tras añadir el dictamen descargable, los 21 casos de interfaz pasaron de nuevo en 43.16 s. Las ecuaciones, parámetros y resultados numéricos del banco no fueron modificados por el cambio de presentación. Se revisaron visualmente colores, nivel del tanque, marcas de consigna y conexiones de las bombas.
+
+docs/DICTAMEN_REPLICACION.md contiene la matriz de alcance para el docente. La conclusión es reproducción metodológica verificable con supuestos declarados; no certificación de igualdad numérica con experimentos originales sin disponer de datos y código de los autores.

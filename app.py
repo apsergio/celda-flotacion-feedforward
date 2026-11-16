@@ -4,12 +4,14 @@ import plotly.graph_objects as go
 from model import Config, compare, KC, TI, KFF
 from dataclasses import asdict
 from ui_modules import MODULES, render, remember
+from presentation import install_visual_theme, COLORS
 
 st.set_page_config(page_title='Flotation Lab | Control de nivel',page_icon='🫧',layout='wide')
-st.markdown('''<style>.block-container{padding-top:2rem}div[data-testid="stMetric"]{background:#14293b;padding:16px;border-radius:12px}h1{letter-spacing:-1.5px}</style>''',unsafe_allow_html=True)
+install_visual_theme()
 st.caption('LABORATORIO VIRTUAL · METHODSX 102081 · 2023')
 st.title('Banco de flotación')
 st.write('Control de nivel con bombas peristálticas · Feedback y Feedforward')
+st.caption('● Azul: Feedback   ·   ● Verde agua: Feedback + Feedforward   ·   ● Ámbar: consigna. Las curvas también se identifican por nombre y tipo de línea.')
 with st.sidebar:
     navigation=st.radio('Módulo',MODULES,key='navigation')
     st.caption('Versión 2 · calibrar → identificar → sintonizar → controlar')
@@ -71,18 +73,19 @@ if d.button('↺ Reiniciar',use_container_width=True): st.session_state.update(c
 st.caption('Reproducción de un experimento calculado a 1 s. Ambas estrategias usan el mismo escenario; la recirculación genera perturbaciones internas distintas.')
 
 def diagram(row):
-    parts=['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 340"><rect width="1000" height="340" rx="18" fill="#102536"/><g fill="#e7f1f5" font-family="sans-serif">']
-    parts.append(f'<rect x="24" y="90" width="130" height="180" rx="8" fill="#1c4b60" stroke="#76c8da"/><text x="40" y="65">T-1 · 130 L</text><text x="40" y="190">{row.tank_L:.1f} L</text>')
+    parts=['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 340"><defs><linearGradient id="water" x2="0" y2="1"><stop stop-color="#35D6BB" stop-opacity=".9"/><stop offset="1" stop-color="#198FAD"/></linearGradient></defs><rect width="1000" height="340" rx="18" fill="#102137"/><g fill="#EDF3FC" font-family="Arial,sans-serif">']
+    tank_fill=176*min(max(row.tank_L/130,0),1)
+    parts.append(f'<rect x="24" y="90" width="130" height="180" rx="8" fill="#0D1B2E" stroke="#7FA9F5"/><rect x="26" y="{268-tank_fill}" width="126" height="{tank_fill}" rx="5" fill="url(#water)"/><text x="40" y="65">T-1 · 130 L</text><text x="40" y="190">{row.tank_L:.1f} L</text>')
     parts.append('<text x="35" y="35" fill="#7cb6c6">Aire: 47 L/min/celda (constante)</text>')
     for i,x in enumerate([250,500,750]):
         h=row[f'c{i+1}_h_cm']; water=160*h/45
-        parts.append(f'<path d="M{x} 90 V270 H{x+150} V90" fill="#172f43" stroke="#7cb6c6" stroke-width="3"/><rect x="{x+2}" y="{268-water}" width="146" height="{water}" fill="#178f9c"/><text x="{x}" y="58">C-{i+1} · LI-{i+1}</text><text x="{x+12}" y="210">{h:.2f} cm</text><text x="{x}" y="295">P-{i+1}: {row[f"c{i+1}_q_L_min"]:.1f} L/min</text>')
-        source=154 if i==0 else x-100
-        parts.append(f'<path d="M{source} 135 H{x}" stroke="#31d3b1" stroke-width="5"/><text x="{source+8}" y="120">→</text>')
+        target=268-160*row[f'c{i+1}_sp_cm']/45
+        parts.append(f'<path d="M{x} 90 V270 H{x+150} V90" fill="#0D1B2E" stroke="#7FA9F5" stroke-width="3"/><rect x="{x+2}" y="{268-water}" width="146" height="{water}" fill="url(#water)"/><path d="M{x+5} {target} H{x+145}" stroke="#FFC76A" stroke-width="2" stroke-dasharray="6 4"/><text x="{x}" y="58">C-{i+1} · LI-{i+1}</text><text x="{x+12}" y="240">{h:.2f} cm</text><text x="{x}" y="295">P-{i+1}: {row[f"c{i+1}_q_L_min"]:.1f} L/min</text>')
+        if i<2: parts.append(f'<path d="M{x+150} 245 H{x+175} V135 H{x+250}" fill="none" stroke="#35D6BB" stroke-width="4"/><text x="{x+218}" y="125">→</text>')
         parts.append(f'<circle cx="{x+170}" cy="245" r="13" fill="#102536" stroke="#31d3b1" stroke-width="3"/><path d="M{x+163} 245 l12 -6 v12 z" fill="#31d3b1"/>')
         parts.append(f'<path d="M{x+145} 100 V78 H90" fill="none" stroke="#e9b85c" stroke-width="2"/>')
-    parts.append('<path d="M900 245 H960 V320 H90 V270" fill="none" stroke="#31d3b1" stroke-width="4"/><text x="390" y="338">Relaves C-3 → T-1 · retorno cerrado</text><text x="380" y="25" fill="#e9b85c">Concentrados C-1/2/3 → T-1</text>')
-    parts.append(f'<text x="165" y="165">P-4</text><text x="165" y="185">{row.feed_L_min:.1f}</text></g></svg>')
+    parts.append('<path d="M900 245 H960 V320 H90 V270" fill="none" stroke="#35D6BB" stroke-width="4"/><path d="M154 180 H200 V135 H250" fill="none" stroke="#35D6BB" stroke-width="4"/><circle cx="200" cy="180" r="13" fill="#102137" stroke="#35D6BB" stroke-width="3"/><text x="390" y="338">Relaves C-3 → T-1 · retorno cerrado</text><text x="380" y="25" fill="#FFC76A">Concentrados C-1/2/3 → T-1</text>')
+    parts.append(f'<text x="165" y="210">P-4</text><text x="165" y="230">{row.feed_L_min:.1f}</text></g></svg>')
     return ''.join(parts)
 
 @st.fragment(run_every=2 if st.session_state.running else None)
@@ -100,12 +103,12 @@ def playback():
         col.caption(f'Orden P-{i+1}: {selected[f"c{i+1}_u_L_min"]:.2f} L/min · FF: {selected[f"c{i+1}_ff_L_min"]:+.2f} L/min')
     for i in range(3):
         fig=go.Figure()
-        for strategy,color in [('FB','#91a8c3'),('FB+FF','#20d9b1')]:
+        for strategy,color in [('FB',COLORS['FB']),('FB+FF',COLORS['FB+FF'])]:
             frame=data[(data['mode']==strategy)&(data.t_s<=cursor)]
             fig.add_trace(go.Scatter(x=frame.t_s,y=frame[f'c{i+1}_pv_cm'],name=strategy,line_color=color))
         frame=data[(data['mode']==mode)&(data.t_s<=cursor)]
-        fig.add_trace(go.Scatter(x=frame.t_s,y=frame[f'c{i+1}_sp_cm'],name='SP',line=dict(color='#f4c768',dash='dash')))
-        fig.update_layout(title=f'Celda {i+1} · nivel filtrado',xaxis_title='Tiempo (s)',yaxis_title='Nivel (cm)',height=260,margin=dict(t=45,b=35),template='plotly_dark',legend_orientation='h')
+        fig.add_trace(go.Scatter(x=frame.t_s,y=frame[f'c{i+1}_sp_cm'],name='SP',line=dict(color=COLORS['SP'],dash='dash')))
+        fig.update_layout(title=f'Celda {i+1} · nivel filtrado',xaxis_title='Tiempo (s)',yaxis_title='Nivel (cm)',height=280,margin=dict(t=50,b=40),template='flotation',legend_orientation='h')
         st.plotly_chart(fig,use_container_width=True,key=f'level{i}')
 playback()
 tab1,tab2,tab3=st.tabs(['Comparación final','Señales y descarga','Método y trazabilidad'])
