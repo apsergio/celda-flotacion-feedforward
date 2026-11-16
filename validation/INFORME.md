@@ -40,4 +40,10 @@ La cadena PLC es un modelo ideal de señales y una muestra calculada de PI, no c
 
 Aplicación existente: https://celda-flotacion-feedforward.streamlit.app/
 Repositorio existente: https://github.com/apsergio/celda-flotacion-feedforward
-La versión 1 se conserva mediante etiqueta Git v1-control-nivel y ZIP separado. La comprobación del ZIP ampliado y de la versión pública ampliada se registra al finalizar la publicación; no se confunde la comprobación anterior de versión 1 con esa verificación nueva.
+La versión 1 se conserva mediante etiqueta Git v1-control-nivel y ZIP separado.
+
+**ZIP ampliado descomprimido:** 72 pruebas aprobadas en 61.17 s desde una carpeta nueva, usando el mismo entorno virtual de dependencias ya instalado. Se registró junit-zip-v2.xml. No se afirma una segunda instalación de dependencias desde cero. La comprobación CRC del archivo fue satisfactoria.
+
+**Aplicación pública ampliada:** verificada en navegador tras publicar el commit 1589e6c. Se observó la navegación de versión 2 y se ejecutó Sintonización SIMC: al cambiar τc de 7 a 14 s, Kc pasó de −70.16559 a −46.77706 L/min/cm y Ti de 56 a 84 s; la gráfica y el IAE alternativo se recalcularon. Captura entregada: ampliacion-metodologica-publicada.jpg. No se atribuye a una prueba manual de cada combinación posible; los 12 módulos y controles descritos se verifican además por AppTest.
+
+El cierre de distribución modifica documentación y añade el informe del ZIP; el código Python del ZIP final se compara por SHA-256 con la copia que pasó las 72 pruebas.
