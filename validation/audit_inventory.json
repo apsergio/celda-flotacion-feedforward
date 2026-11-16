@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "file_count": 55,
+  "file_count": 58,
   "files": [
     {
       "file": ".gitignore",
@@ -134,8 +134,8 @@
     },
     {
       "file": "validation/INFORME_FINAL.md",
-      "bytes": 2241,
-      "sha256": "7307ea495c5b5035e6a1e6b1cb27a28c1c89e4ce5ab0d2a66eca320a1aa466fa"
+      "bytes": 4132,
+      "sha256": "73ae457bc49732a001f67f8227fc138a0864d62940da0a02b005166d2664f951"
     },
     {
       "file": "validation/junit-auditoria-final.xml",
@@ -146,6 +146,11 @@
       "file": "validation/junit-v2.xml",
       "bytes": 8055,
       "sha256": "35a31ca62496b6afd1302b42527bd903cedbbb655958cc39a7c0782e4bf184a1"
+    },
+    {
+      "file": "validation/junit-zip-final.xml",
+      "bytes": 9588,
+      "sha256": "f7f46024f4060f7199bbd8c30bf1bdd5dc8c9acdfa150465fe9e74b027bd2168"
     },
     {
       "file": "validation/junit-zip-v2.xml",
@@ -273,9 +278,19 @@
       "sha256": "30673b5722243f4d19c347ee2336c43c022ed42a42ffdc69a728196833890e6d"
     },
     {
+      "file": "validation/public_access_final.json",
+      "bytes": 94191,
+      "sha256": "6d32f73d0d658a885c8af12819458ceef07d959d63c8a4a139cdfe72918221fc"
+    },
+    {
       "file": "validation/pytest.txt",
       "bytes": 102,
       "sha256": "4adc07cb01db0c7dec0d539f3cc59a54d827c73226808449ca163759d612235b"
+    },
+    {
+      "file": "validation/zip_access_final.json",
+      "bytes": 94162,
+      "sha256": "ca920d682ad9aaf2ba19702f3ac540ae8b443129c36484a1a1202a7a9a775c37"
     }
   ],
   "import_roots": [

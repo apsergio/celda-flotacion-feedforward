@@ -1,0 +1,468 @@
+{
+  "url": "http://127.0.0.1:8510",
+  "root_status": 200,
+  "app_frame_status": 200,
+  "authentication_supplied": false,
+  "initial_cookie_count": 0,
+  "browser_incognito_test": false,
+  "transport": "anonymous HTTP plus Streamlit WebSocket",
+  "modules": [
+    {
+      "selected_module": null,
+      "headings_and_text": [
+        "<style>\n    .stApp {background:radial-gradient(ellipse at 85% 0%,#13253E 0%,#08111F 55%)}\n    .block-container {padding-top:2.2rem;padding-bottom:3rem;max-width:1440px}\n    h1 {letter-spacing:-1.5px;font-weight:750!important}\n    h2 {letter-spacing:-.6px}\n    h3 {color:#C6D9F5}\n    [data-testid=\"stSidebar\"] {background:#0D1B2D;border-right:1px solid #223650}\n    [data-testid=\"stMetric\"] {background:linear-gradient(135deg,#152B45,#102137);\n      border:1px solid #2B4563;border-top:3px solid #35D6BB;\n      padding:18px;border-radius:14px;box-shadow:0 8px 22px #00000018}\n    [data-testid=\"stMetricLabel\"] {color:#C6D9F5}\n    [data-testid=\"stMetricValue\"] {color:#F5F8FF}\n    [data-testid=\"stButton\"] button,[data-testid=\"stDownloadButton\"] button {\n      border-radius:10px;border:1px solid #39516E;transition:border-color .15s}\n    [data-testid=\"stButton\"] button:hover,[data-testid=\"stDownloadButton\"] button:hover {\n      border-color:#35D6BB}\n    [data-testid=\"stTabs\"] [role=\"tablist\"] {gap:8px;border-bottom:1px solid #263B55}\n    [data-testid=\"stTabs\"] [role=\"tab\"] {border-radius:8px 8px 0 0;padding:10px 16px}\n    [data-testid=\"stTabs\"] [aria-selected=\"true\"] {background:#163344;color:#5BE3CB}\n    [data-testid=\"stExpander\"] {border-color:#2B405D;border-radius:12px}\n    </style>",
+        "LABORATORIO VIRTUAL · METHODSX 102081 · 2023",
+        "Entrega final auditada · 2026-11-16",
+        "Banco de flotación",
+        "Control de nivel con bombas peristálticas · Feedback y Feedforward",
+        "● Azul: Feedback   ·   ● Verde agua: Feedback + Feedforward   ·   ● Ámbar: consigna. Las curvas también se identifican por nombre y tipo de línea.",
+        "Versión 2 · calibrar → identificar → sintonizar → controlar",
+        "Experimento",
+        "Perturbación P-4",
+        "Escalón de consigna",
+        "Los caudales máximos y el concentrado son supuestos editables. El artículo no proporciona su ley dinámica.",
+        "Planta identificada de Tabla 2. Su almacenamiento efectivo conserva el balance matemático, pero no representa el volumen geométrico real. Consulte Modelos matemáticos.",
+        "Reproducción de un experimento calculado a 1 s. Ambas estrategias usan el mismo escenario; la recirculación genera perturbaciones internas distintas.",
+        "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1000 340\"><defs><linearGradient id=\"water\" x2=\"0\" y2=\"1\"><stop stop-color=\"#35D6BB\" stop-opacity=\".9\"/><stop offset=\"1\" stop-color=\"#198FAD\"/></linearGradient></defs><rect width=\"1000\" height=\"340\" rx=\"18\" fill=\"#102137\"/><g fill=\"#EDF3FC\" font-family=\"Arial,sans-serif\"><rect x=\"24\" y=\"90\" width=\"130\" height=\"180\" rx=\"8\" fill=\"#0D1B2E\" stroke=\"#7FA9F5\"/><rect x=\"26\" y=\"132.6153846153846\" width=\"126\" height=\"135.3846153846154\" rx=\"5\" fill=\"url(#water)\"/><text x=\"40\" y=\"65\">T-1 · 130 L</text><text x=\"40\" y=\"190\">100.0 L</text><text x=\"35\" y=\"35\" fill=\"#7cb6c6\">Aire: 47 L/min/celda (constante)</text><path d=\"M250 90 V270 H400 V90\" fill=\"#0D1B2E\" stroke=\"#7FA9F5\" stroke-width=\"3\"/><rect x=\"252\" y=\"179.11111111111111\" width=\"146\" height=\"88.88888888888889\" fill=\"url(#water)\"/><path d=\"M255 179.11111111111111 H395\" stroke=\"#FFC76A\" stroke-width=\"2\" stroke-dasharray=\"6 4\"/><text x=\"250\" y=\"58\">C-1 · LI-1</text><text x=\"262\" y=\"240\">25.00 cm</text><text x=\"250\" y=\"295\">P-1: 44.8 L/min</text><path d=\"M400 245 H425 V135 H500\" fill=\"none\" stroke=\"#35D6BB\" stroke-width=\"4\"/><text x=\"468\" y=\"125\">→</text><circle cx=\"420\" cy=\"245\" r=\"13\" fill=\"#102536\" stroke=\"#31d3b1\" stroke-width=\"3\"/><path d=\"M413 245 l12 -6 v12 z\" fill=\"#31d3b1\"/><path d=\"M395 100 V78 H90\" fill=\"none\" stroke=\"#e9b85c\" stroke-width=\"2\"/><path d=\"M500 90 V270 H650 V90\" fill=\"#0D1B2E\" stroke=\"#7FA9F5\" stroke-width=\"3\"/><rect x=\"502\" y=\"179.11111111111111\" width=\"146\" height=\"88.88888888888889\" fill=\"url(#water)\"/><path d=\"M505 179.11111111111111 H645\" stroke=\"#FFC76A\" stroke-width=\"2\" stroke-dasharray=\"6 4\"/><text x=\"500\" y=\"58\">C-2 · LI-2</text><text x=\"512\" y=\"240\">25.00 cm</text><text x=\"500\" y=\"295\">P-2: 44.6 L/min</text><path d=\"M650 245 H675 V135 H750\" fill=\"none\" stroke=\"#35D6BB\" stroke-width=\"4\"/><text x=\"718\" y=\"125\">→</text><circle cx=\"670\" cy=\"245\" r=\"13\" fill=\"#102536\" stroke=\"#31d3b1\" stroke-width=\"3\"/><path d=\"M663 245 l12 -6 v12 z\" fill=\"#31d3b1\"/><path d=\"M645 100 V78 H90\" fill=\"none\" stroke=\"#e9b85c\" stroke-width=\"2\"/><path d=\"M750 90 V270 H900 V90\" fill=\"#0D1B2E\" stroke=\"#7FA9F5\" stroke-width=\"3\"/><rect x=\"752\" y=\"179.11111111111111\" width=\"146\" height=\"88.88888888888889\" fill=\"url(#water)\"/><path d=\"M755 179.11111111111111 H895\" stroke=\"#FFC76A\" stroke-width=\"2\" stroke-dasharray=\"6 4\"/><text x=\"750\" y=\"58\">C-3 · LI-3</text><text x=\"762\" y=\"240\">25.00 cm</text><text x=\"750\" y=\"295\">P-3: 44.4 L/min</text><circle cx=\"920\" cy=\"245\" r=\"13\" fill=\"#102536\" stroke=\"#31d3b1\" stroke-width=\"3\"/><path d=\"M913 245 l12 -6 v12 z\" fill=\"#31d3b1\"/><path d=\"M895 100 V78 H90\" fill=\"none\" stroke=\"#e9b85c\" stroke-width=\"2\"/><path d=\"M900 245 H960 V320 H90 V270\" fill=\"none\" stroke=\"#35D6BB\" stroke-width=\"4\"/><path d=\"M154 180 H200 V135 H250\" fill=\"none\" stroke=\"#35D6BB\" stroke-width=\"4\"/><circle cx=\"200\" cy=\"180\" r=\"13\" fill=\"#102137\" stroke=\"#35D6BB\" stroke-width=\"3\"/><text x=\"390\" y=\"338\">Relaves C-3 → T-1 · retorno cerrado</text><text x=\"380\" y=\"25\" fill=\"#FFC76A\">Concentrados C-1/2/3 → T-1</text><text x=\"165\" y=\"210\">P-4</text><text x=\"165\" y=\"230\">45.0</text></g></svg>",
+        "Orden P-1: 44.80 L/min · FF: +0.00 L/min",
+        "Orden P-2: 44.60 L/min · FF: +0.00 L/min",
+        "Orden P-3: 44.40 L/min · FF: +0.00 L/min",
+        "# Metodología ampliada · versión 2\n\nFuente: P. Quintanilla, D. Navia, F. Moreno, S. J. Neethling y P. R. Brito-Parada, MethodsX 10 (2023), 102081. **A methodology to implement a closed-loop feedback-feedforward level control in a laboratory-scale flotation bank using peristaltic pumps**. DOI https://doi.org/10.1016/j.mex.2023.102081. Artículo CC BY 4.0. Aplicación educativa independiente, no avalada por los autores.\n\nSe revisaron las 15 páginas del PDF y se inspeccionaron visualmente las figuras 8,9,11,12 y Tabla 2 a mayor resolución. La versión anterior se conserva en Git (`v1-control-nivel`) y en METODOLOGIA_V1.md como documentación histórica.\n\n## Procedencia y trazabilidad\n\n- **Publicado:** tablas, ecuaciones rotuladas y valores IAE de las figuras. No son series originales recuperadas.\n- **Digitalizado aproximado:** puntos leídos visualmente de Fig. 12; una sola curva visible por celda, sin fabricar repeticiones.\n- **Sintético:** modelos y ruido calculados con semilla reproducible, nunca atribuidos a mediciones de los autores.\n- **Propio:** observaciones introducidas por el docente. Se conserva su procedencia declarada, sin certificar cómo se obtuvieron.\n\n| Componente | Fuente | Implementación |\n|---|---|---|\n| Banco y retorno de concentrados | pp. 2–5, Figs. 1–4 | Proceso con balance cerrado |\n| Celdas 30×30×45 cm, A=0.09 m²; T-1=130 L | p. 2, Fig. 2 p. 4 | Auditoría y alternativa geométrica |\n| Bombas: registros, 10 s y triplicados | p. 7, Fig. 9 p. 9 | Tabla/CSV, ajuste, residuos y estadística |\n| Sensores 0–39 cm, descensos ~2 cm | pp. 6–10, Figs. 10–11 | Ajustes individuales LI-1/2/3 |\n| Aire: lectura y salida | pp. 6–8, Fig. 8 | FIC-1/2/3 y velocidad superficial jg |\n| INT 0–32767 y 4–20 mA | pp. 2,6–7 | Cadena ideal, cuantización y saturación |\n| Identificación de k′ y θ | pp. 10–12, Fig. 12, Ec. 5 | Escalones, dos puntos, tres ensayos o importación |\n| SIMC | Ecs. 2–6, pp. 8,10 | Calculadora, restricciones y alternativas PI |\n| Modelos y PI finales | Tabla 2 p. 12 | k′=−0.001018; θ=(7,6,3); Kc=(−62,−76,−85); Ti=(56,30,44) |\n| Feedforward | Ecs. 7–8, Fig. 13 p. 12 | Kff=(0.8,0.8,1), diferencia entre muestras |\n| Primer orden | Ec. 4, Ecs. 10–15 p. 14 | Modelo independiente con respuesta analítica |\n| 15 min, 1 s, mediana 10 muestras | p. 13 | Comparación dedicada y filtrado documentado |\n| IAE y resultados publicados | Ec. 9, Fig. 14 p. 13 | Métricas reales/medidas/filtradas y panel experimental separado |\n| Reactivos y tiempos | pp. 4–6,13 | Asistente de nueve etapas |\n\n## Calibración\n\nEcuaciones transcritas de las figuras, con su precisión gráfica publicada:\n\n| Instrumento | Ecuación rotulada | Salida |\n|---|---|---|\n| P-4 | Q=0.0035 N | L/min |\n| P-1 | Q=0.0029 N | L/min |\n| P-2, P-3 | Q=0.0033 N | L/min |\n| LI-1 | h=−0.0018 N+40.1363 | cm |\n| LI-2 | h=−0.0019 N+43.8823 | cm |\n| LI-3 | h=−0.0020 N+41.293 | cm |\n| Aire, lectura | Qair=0.0032 N | L/min |\n| Aire, salida | Qair=0.0031 N | L/min |\n\nN es el valor del registro INT. Los tres controladores de aire se declaran iguales en el artículo, pero los ajustes propios se guardan individualmente. Los coeficientes anteriores están redondeados y no constituyen nuevas mediciones digitalizadas.\n\nPara bombas: Q=60V/Δt con V en L, Δt=10 s por defecto y registros 5000,10000,20000,25000,28000. Se ajustan todas las observaciones, con opción de intercepto libre o cero; se muestran pendiente, intercepto, R² centrado, RMSE, residuos y media/DE muestral por punto (`ddof=1`). Se comprueba el triplicado y se rechazan identificadores repetidos. Sin observaciones, una recta publicada no recibe R² o intervalos inventados.\n\nEl intervalo de predicción OLS 95% usa distribución t y n−p grados de libertad; presupone errores independientes, normales y de varianza constante. En sensores hay error en el eje de registro: OLS es aproximación docente, no certificación metrológica. La leyenda de Fig. 11 dice intercepto fijado en cero, pero las ecuaciones visibles tienen intercepto no nulo: se muestra la contradicción. El rango nominal 0–39 cm no implica validación experimental completa de la figura; las extrapolaciones se advierten.\n\n## Identificación y SIMC\n\nLa planta individual integradora usa dy/dt=k′u(t−θ), en desviaciones respecto al punto inicial. Su entrada se mantiene constante y el escalón modifica la salida; no se aplica recirculación simultánea en este ensayo individual. Hay tres repeticiones sintéticas con ruido de semilla fija, o se importan las repeticiones existentes sin fabricar otras. Si un ensayo geométrico sale de 0–45 cm, se rechaza sin recortar la curva.\n\nk′=(y2−y1)/[(t2−t1)Δu]. La estimación de θ prolonga la recta entre los puntos hasta la mediana de las muestras de los 10 s previos al escalón. Depende de ruido, selección y estabilidad de la línea base; no es un identificador universal. Se marcan retardos extrapolados inválidos y se permite aceptar θ por inspección. El banco usa un retardo entero ≥1 s, redondeado explícitamente.\n\nSIMC: Kc=1/[k′(τc+θ)], Ti=min{τ1,4(τc+θ)}. En el límite integrador τ1→∞ se obtiene Ti=4(τc+θ). También puede explorarse τ1 finito. Se evalúan por separado τc≥θ y Ti≥4(τc+θ), según el texto; una contradicción con la operación min se informa.\n\nTabla 2 se conserva sin cambios. Para celda 3, k′=−0.001018, θ=3 y τc=8 dan Kc≈−89.30 y Ti=44 bajo el límite integrador, mientras la tabla rotula iniciales −78.1 y 52. Los Ti finales de celdas 2 y 3 tampoco cumplen esa cota usando los τc tabulados. Se muestran las diferencias; los finales publicados no se sustituyen por los iniciales. La comparación de τc usa la misma planta en ambos controladores. Guardar/aplicar un PI alternativo es explícito.\n\n## Dos modelos independientes\n\nIntegrador, Tabla 2: dy/dt=k′u(t−θ); con condiciones iniciales nulas en desviaciones, sY=k′e^(−θs)U y G=k′e^(−θs)/s. Un escalón genera rampa después del retardo.\n\nPrimer orden, Ecs. 10–15: τ1 dy/dt=−y+ku(t−θ); τ1sY=−Y+ke^(−θs)U; G=ke^(−θs)/(τ1s+1). Un escalón converge a kΔu. El artículo no proporciona una pareja independiente (k,τ1) validada: en esta comparación son supuestos editables. Elegir k=k′τ1 iguala la pendiente inicial, no toda la respuesta. El primer orden se estudia por separado y no reemplaza el balance conservativo del banco.\n\n## Geometría y discrepancia no resuelta\n\nA=0.09 m²; Vmax=40.5 L; V=0.9h L con h en cm. El balance líquido implica k′=−1/(60×0.9)=−0.0185185 cm/s por L/min. Tabla 2 publica −0.001018, unas 18.19 veces menor. Interpretar esa ganancia como un balance puramente líquido exigiría almacenamiento efectivo 16.37 L/cm o área efectiva ~1.637 m², incompatible con el área geométrica sin escalamiento o física adicional.\n\nSe consultaron la versión editorial, https://pmc.ncbi.nlm.nih.gov/articles/PMC9988547/ y repositorios Imperial/Brunel. La búsqueda por DOI y corrección no aportó una explicación verificable. Error de unidades, calibración o aireación son hipótesis, no hechos implementados. No se modifica arbitrariamente la geometría para forzar coincidencia.\n\nLas alternativas son: geometría publicada, parámetros identificados por usuario y parámetros publicados Tabla 2. La última conserva un inventario efectivo matemático para la conservación; **no representa el volumen físico del equipo**.\n\n## Banco, PI, instrumentación y filtro\n\nV_i[k+1]=V_i[k]+(Qin_i−Qout_i−Qconc_i)/60; V_T[k+1]=V_T[k]+(Qout_3+ΣQconc−Qfeed)/60. Caudales L/min, volúmenes L, tiempo s. Las salidas reales alimentan simultáneamente la siguiente celda y todo concentrado vuelve a T-1. Se impide extraer inventario inexistente y el desborde retorna al tanque. Si T-1 supera 130 L, se detiene sin perder masa por recorte silencioso.\n\nPI: u=Q0+Kc e+I+FF; I[k]=I[k−1]+Kc e[k]/Ti; e=SP−PV. Sesgo Q0, límites editables y anti-windup condicional son decisiones de ingeniería añadidas. No hay límite de velocidad de cambio. FF literal=Kff(Qin[k]−Qin[k−1]), Ecs. 7–8; la opción respecto al caudal inicial sigue marcada como extensión pedagógica.\n\nCadena PLC con ajustes individuales guardados o rectas publicadas: N=round[(I−4)32767/16], I=4+16N/32767; h=aLI N+bLI; NP=(Qorden−bP)/aP; Q=aP NP+bP. Se muestran valores ideales, cuantizados, saturados y escalados. La correspondencia eléctrica lineal es una convención ideal asumida, no emulación de códigos físicos GE. La vista calcula una muestra de PI con integral anterior editable; no se conecta a un PLC. No se inventa la relación bits/rpm a partir del rango 0–600 rpm.\n\nEl banco permite ruido gaussiano reproducible; ambas estrategias usan exactamente la misma realización. Mediana causal de N muestras incluida la actual, con relleno inicial al nivel inicial. Para N par se promedian los dos valores centrales. No se afirma equivalencia exacta con medfilt1 ni sus bordes. Se muestran señales real, medida, filtrada, sus errores y sus IAE trapezoidales; el filtro añade retraso y no garantiza mejorar seguimiento.\n\n## Protocolo de Fig. 14 y alcance\n\nEl ensayo dedicado fija entrada C-1=45 L/min; entradas C-2/C-3 son los relaves previos, 900 s, 1 s y mediana 10. Sus niveles iniciales y escalones de consigna son didácticos, no las series originales. IAE experimentales rotulados, cm·s: C-1 198/164, C-2 325/187, C-3 260/221 para FB/FB+FF, mostrados separadamente. Fig. 14 ilustra cerca de 600 s aunque el texto declara 15 min; no se inventan datos faltantes. Los autores ofrecen originales bajo solicitud. Importar curvas propias o digitalizadas no equivale a validación experimental contra las series de los autores.\n\nConcentrado constante 0.2 L/min por celda, límite 100 L/min, inventario T-1 inicial 100 L, sesgo, ubicación de retardos y lógica de desborde siguen como supuestos editables. No se simulan holdup, cinética de espuma, recuperación mineral, cámaras o DDE. El aire es constante en el banco; calibración y jg son módulos funcionales separados.\n\nLos ajustes se guardan en sesión: calibraciones→PLC; identificación→planta/SIMC; SIMC→PI alternativo. Los parámetros JSON pueden exportarse/restaurarse y los CSV se descargan con manifiesto de procedencia. No hay persistencia remota de mediciones propias. Las pruebas matemáticas y de interfaz se separan de comprobaciones de transcripción; ninguna sustituye validar una planta física."
+      ],
+      "radio_labels": [
+        "Módulo",
+        "Estrategia visible"
+      ],
+      "navigation_options": [
+        "Proceso",
+        "Calibración",
+        "Identificación",
+        "Sintonización SIMC",
+        "Modelos matemáticos",
+        "Instrumentación PLC",
+        "Procedimiento guiado",
+        "Ensayos Feedback",
+        "Ensayos Feedforward",
+        "Comparación experimental",
+        "Filtrado",
+        "Resultados y exportación"
+      ],
+      "errors": []
+    },
+    {
+      "selected_module": 1,
+      "headings_and_text": [
+        "<style>\n    .stApp {background:radial-gradient(ellipse at 85% 0%,#13253E 0%,#08111F 55%)}\n    .block-container {padding-top:2.2rem;padding-bottom:3rem;max-width:1440px}\n    h1 {letter-spacing:-1.5px;font-weight:750!important}\n    h2 {letter-spacing:-.6px}\n    h3 {color:#C6D9F5}\n    [data-testid=\"stSidebar\"] {background:#0D1B2D;border-right:1px solid #223650}\n    [data-testid=\"stMetric\"] {background:linear-gradient(135deg,#152B45,#102137);\n      border:1px solid #2B4563;border-top:3px solid #35D6BB;\n      padding:18px;border-radius:14px;box-shadow:0 8px 22px #00000018}\n    [data-testid=\"stMetricLabel\"] {color:#C6D9F5}\n    [data-testid=\"stMetricValue\"] {color:#F5F8FF}\n    [data-testid=\"stButton\"] button,[data-testid=\"stDownloadButton\"] button {\n      border-radius:10px;border:1px solid #39516E;transition:border-color .15s}\n    [data-testid=\"stButton\"] button:hover,[data-testid=\"stDownloadButton\"] button:hover {\n      border-color:#35D6BB}\n    [data-testid=\"stTabs\"] [role=\"tablist\"] {gap:8px;border-bottom:1px solid #263B55}\n    [data-testid=\"stTabs\"] [role=\"tab\"] {border-radius:8px 8px 0 0;padding:10px 16px}\n    [data-testid=\"stTabs\"] [aria-selected=\"true\"] {background:#163344;color:#5BE3CB}\n    [data-testid=\"stExpander\"] {border-color:#2B405D;border-radius:12px}\n    </style>",
+        "LABORATORIO VIRTUAL · METHODSX 102081 · 2023",
+        "Entrega final auditada · 2026-11-16",
+        "Banco de flotación",
+        "Control de nivel con bombas peristálticas · Feedback y Feedforward",
+        "● Azul: Feedback   ·   ● Verde agua: Feedback + Feedforward   ·   ● Ámbar: consigna. Las curvas también se identifican por nombre y tipo de línea.",
+        "Versión 2 · calibrar → identificar → sintonizar → controlar",
+        "Calibración individual de instrumentos",
+        "Figs. 7–11 · pp. 6–10. Los registros son valores INT, no una secuencia binaria.",
+        "$$\nQ\\,[L/min]=\\frac{V\\,[L]}{\\Delta t\\,[s]}\\,60\n$$",
+        "Procedimiento publicado: registros 5000, 10000, 20000, 25000 y 28000; recoger volumen durante 10 s y repetir tres veces en cada punto."
+      ],
+      "radio_labels": [
+        "Módulo",
+        "Origen de los datos"
+      ],
+      "navigation_options": [
+        "Proceso",
+        "Calibración",
+        "Identificación",
+        "Sintonización SIMC",
+        "Modelos matemáticos",
+        "Instrumentación PLC",
+        "Procedimiento guiado",
+        "Ensayos Feedback",
+        "Ensayos Feedforward",
+        "Comparación experimental",
+        "Filtrado",
+        "Resultados y exportación"
+      ],
+      "errors": []
+    },
+    {
+      "selected_module": 2,
+      "headings_and_text": [
+        "<style>\n    .stApp {background:radial-gradient(ellipse at 85% 0%,#13253E 0%,#08111F 55%)}\n    .block-container {padding-top:2.2rem;padding-bottom:3rem;max-width:1440px}\n    h1 {letter-spacing:-1.5px;font-weight:750!important}\n    h2 {letter-spacing:-.6px}\n    h3 {color:#C6D9F5}\n    [data-testid=\"stSidebar\"] {background:#0D1B2D;border-right:1px solid #223650}\n    [data-testid=\"stMetric\"] {background:linear-gradient(135deg,#152B45,#102137);\n      border:1px solid #2B4563;border-top:3px solid #35D6BB;\n      padding:18px;border-radius:14px;box-shadow:0 8px 22px #00000018}\n    [data-testid=\"stMetricLabel\"] {color:#C6D9F5}\n    [data-testid=\"stMetricValue\"] {color:#F5F8FF}\n    [data-testid=\"stButton\"] button,[data-testid=\"stDownloadButton\"] button {\n      border-radius:10px;border:1px solid #39516E;transition:border-color .15s}\n    [data-testid=\"stButton\"] button:hover,[data-testid=\"stDownloadButton\"] button:hover {\n      border-color:#35D6BB}\n    [data-testid=\"stTabs\"] [role=\"tablist\"] {gap:8px;border-bottom:1px solid #263B55}\n    [data-testid=\"stTabs\"] [role=\"tab\"] {border-radius:8px 8px 0 0;padding:10px 16px}\n    [data-testid=\"stTabs\"] [aria-selected=\"true\"] {background:#163344;color:#5BE3CB}\n    [data-testid=\"stExpander\"] {border-color:#2B405D;border-radius:12px}\n    </style>",
+        "LABORATORIO VIRTUAL · METHODSX 102081 · 2023",
+        "Entrega final auditada · 2026-11-16",
+        "Banco de flotación",
+        "Control de nivel con bombas peristálticas · Feedback y Feedforward",
+        "● Azul: Feedback   ·   ● Verde agua: Feedback + Feedforward   ·   ● Ámbar: consigna. Las curvas también se identifican por nombre y tipo de línea.",
+        "Versión 2 · calibrar → identificar → sintonizar → controlar",
+        "Identificación en lazo abierto",
+        "Fig. 12 · Ec. 5 · pp. 10–12. Ganancia de nivel respecto al caudal de salida.",
+        "La reproducción no modifica el conjunto registrado; la identificación utiliza el ensayo completo mostrado en la tabla y exportable.",
+        "$$\nk'=\\frac{y_2-y_1}{(t_2-t_1)\\Delta u}\\quad [cm\\,s^{-1}/(L\\,min^{-1})]\n$$",
+        "k′: media -0.00102917; DE muestral 1.16116e-05",
+        "θ extrapolado (s): media 8.39644; DE muestral 0.373472",
+        "θ se estima prolongando la recta entre los dos puntos hasta la mediana de las muestras de los 10 s previos al escalón. Depende de la selección, el ruido y la estabilidad de la línea base; no es un identificador universal.",
+        "El banco discreto utiliza retardos enteros de al menos 1 s. Puede conservarse la estimación fraccionaria en el informe; el valor aplicado al banco se redondea y se muestra."
+      ],
+      "radio_labels": [
+        "Módulo",
+        "Origen del ensayo"
+      ],
+      "navigation_options": [
+        "Proceso",
+        "Calibración",
+        "Identificación",
+        "Sintonización SIMC",
+        "Modelos matemáticos",
+        "Instrumentación PLC",
+        "Procedimiento guiado",
+        "Ensayos Feedback",
+        "Ensayos Feedforward",
+        "Comparación experimental",
+        "Filtrado",
+        "Resultados y exportación"
+      ],
+      "errors": []
+    },
+    {
+      "selected_module": 3,
+      "headings_and_text": [
+        "<style>\n    .stApp {background:radial-gradient(ellipse at 85% 0%,#13253E 0%,#08111F 55%)}\n    .block-container {padding-top:2.2rem;padding-bottom:3rem;max-width:1440px}\n    h1 {letter-spacing:-1.5px;font-weight:750!important}\n    h2 {letter-spacing:-.6px}\n    h3 {color:#C6D9F5}\n    [data-testid=\"stSidebar\"] {background:#0D1B2D;border-right:1px solid #223650}\n    [data-testid=\"stMetric\"] {background:linear-gradient(135deg,#152B45,#102137);\n      border:1px solid #2B4563;border-top:3px solid #35D6BB;\n      padding:18px;border-radius:14px;box-shadow:0 8px 22px #00000018}\n    [data-testid=\"stMetricLabel\"] {color:#C6D9F5}\n    [data-testid=\"stMetricValue\"] {color:#F5F8FF}\n    [data-testid=\"stButton\"] button,[data-testid=\"stDownloadButton\"] button {\n      border-radius:10px;border:1px solid #39516E;transition:border-color .15s}\n    [data-testid=\"stButton\"] button:hover,[data-testid=\"stDownloadButton\"] button:hover {\n      border-color:#35D6BB}\n    [data-testid=\"stTabs\"] [role=\"tablist\"] {gap:8px;border-bottom:1px solid #263B55}\n    [data-testid=\"stTabs\"] [role=\"tab\"] {border-radius:8px 8px 0 0;padding:10px 16px}\n    [data-testid=\"stTabs\"] [aria-selected=\"true\"] {background:#163344;color:#5BE3CB}\n    [data-testid=\"stExpander\"] {border-color:#2B405D;border-radius:12px}\n    </style>",
+        "LABORATORIO VIRTUAL · METHODSX 102081 · 2023",
+        "Entrega final auditada · 2026-11-16",
+        "Banco de flotación",
+        "Control de nivel con bombas peristálticas · Feedback y Feedforward",
+        "● Azul: Feedback   ·   ● Verde agua: Feedback + Feedforward   ·   ● Ámbar: consigna. Las curvas también se identifican por nombre y tipo de línea.",
+        "Versión 2 · calibrar → identificar → sintonizar → controlar",
+        "Calculadora SIMC y parámetros publicados",
+        "$$\nK_c=\\frac{1}{k'(\\tau_c+\\theta)},\\qquad \\tau_i=\\min\\{\\tau_1,4(\\tau_c+\\theta)\\}\n$$",
+        "Ecs. 2–3, p. 8; condiciones de p. 10. En el límite integrador se usa τ1→∞, por lo que Ti = 4(τc+θ).",
+        "τc ≥ θ: cumple. Ti ≥ 4(τc+θ) = 56 s: cumple.",
+        "Efecto de τc en el banco",
+        "Ensayo simulado de 600 s, escalón +1 cm en la celda seleccionada a 120 s, sin perturbación externa. PI publicados en las otras dos celdas. No es una repetición del experimento original."
+      ],
+      "radio_labels": [
+        "Módulo",
+        "Planta de entrada"
+      ],
+      "navigation_options": [
+        "Proceso",
+        "Calibración",
+        "Identificación",
+        "Sintonización SIMC",
+        "Modelos matemáticos",
+        "Instrumentación PLC",
+        "Procedimiento guiado",
+        "Ensayos Feedback",
+        "Ensayos Feedforward",
+        "Comparación experimental",
+        "Filtrado",
+        "Resultados y exportación"
+      ],
+      "errors": []
+    },
+    {
+      "selected_module": 4,
+      "headings_and_text": [
+        "<style>\n    .stApp {background:radial-gradient(ellipse at 85% 0%,#13253E 0%,#08111F 55%)}\n    .block-container {padding-top:2.2rem;padding-bottom:3rem;max-width:1440px}\n    h1 {letter-spacing:-1.5px;font-weight:750!important}\n    h2 {letter-spacing:-.6px}\n    h3 {color:#C6D9F5}\n    [data-testid=\"stSidebar\"] {background:#0D1B2D;border-right:1px solid #223650}\n    [data-testid=\"stMetric\"] {background:linear-gradient(135deg,#152B45,#102137);\n      border:1px solid #2B4563;border-top:3px solid #35D6BB;\n      padding:18px;border-radius:14px;box-shadow:0 8px 22px #00000018}\n    [data-testid=\"stMetricLabel\"] {color:#C6D9F5}\n    [data-testid=\"stMetricValue\"] {color:#F5F8FF}\n    [data-testid=\"stButton\"] button,[data-testid=\"stDownloadButton\"] button {\n      border-radius:10px;border:1px solid #39516E;transition:border-color .15s}\n    [data-testid=\"stButton\"] button:hover,[data-testid=\"stDownloadButton\"] button:hover {\n      border-color:#35D6BB}\n    [data-testid=\"stTabs\"] [role=\"tablist\"] {gap:8px;border-bottom:1px solid #263B55}\n    [data-testid=\"stTabs\"] [role=\"tab\"] {border-radius:8px 8px 0 0;padding:10px 16px}\n    [data-testid=\"stTabs\"] [aria-selected=\"true\"] {background:#163344;color:#5BE3CB}\n    [data-testid=\"stExpander\"] {border-color:#2B405D;border-radius:12px}\n    </style>",
+        "LABORATORIO VIRTUAL · METHODSX 102081 · 2023",
+        "Entrega final auditada · 2026-11-16",
+        "Banco de flotación",
+        "Control de nivel con bombas peristálticas · Feedback y Feedforward",
+        "● Azul: Feedback   ·   ● Verde agua: Feedback + Feedforward   ·   ● Ámbar: consigna. Las curvas también se identifican por nombre y tipo de línea.",
+        "Versión 2 · calibrar → identificar → sintonizar → controlar",
+        "Dos modelos matemáticos independientes",
+        "Se trabaja en desviaciones alrededor de un punto de operación: y = h − h₀ y u = Qsalida − Q₀. Un caudal de salida mayor hace disminuir el nivel, por lo que la ganancia es negativa.",
+        "A · Integrador con retardo — Tabla 2",
+        "$$\n\\frac{dy}{dt}=k'u(t-\\theta)\n$$",
+        "$$\nsY(s)=k'e^{-\\theta s}U(s),\\quad G_I(s)=\\frac{k'e^{-\\theta s}}s\n$$",
+        "k′: cm/s por L/min; θ: segundos. Con condiciones iniciales nulas para la transformada de desviaciones. Un escalón sostenido genera una rampa; no hay nivel de equilibrio propio.",
+        "B · Primer orden — Ecs. 10–15",
+        "$$\n\\tau_1\\frac{dy}{dt}=-y+ku(t-\\theta)\n$$",
+        "$$\n(\\tau_1s+1)Y(s)=ke^{-\\theta s}U(s),\\quad G_F(s)=\\frac{ke^{-\\theta s}}{\\tau_1s+1}\n$$",
+        "k: cm por L/min; τ1: constante de tiempo en segundos. Un escalón converge a kΔu. El artículo no publica una pareja independiente (k,τ1) validada para este modelo.",
+        "Auditoría de geometría y ganancia",
+        "$$\nA=0.30\\cdot0.30=0.09\\;m^2,\\quad V_{max}=40.5\\;L\n$$",
+        "$$\n\\frac{dh\\,[cm]}{dt\\,[s]}=\\frac{Q_{in}-Q_{out}-Q_{conc}}{60(0.9)}\n$$",
+        "Geometría: k′ = −0.0185185 cm/s por L/min. Tabla 2: −0.001018. Relación ≈18.19. El valor publicado implicaría A efectiva ≈1.637 m² si se interpreta como un balance puramente líquido; no equivale al área geométrica 0.09 m².",
+        "[Versión editorial](https://doi.org/10.1016/j.mex.2023.102081) · [Texto completo PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC9988547/) · [Repositorio Imperial](https://spiral.imperial.ac.uk/entities/publication/b2c4a9bd-e06f-4e55-80c2-4be6893a326a)"
+      ],
+      "radio_labels": [
+        "Módulo"
+      ],
+      "navigation_options": [
+        "Proceso",
+        "Calibración",
+        "Identificación",
+        "Sintonización SIMC",
+        "Modelos matemáticos",
+        "Instrumentación PLC",
+        "Procedimiento guiado",
+        "Ensayos Feedback",
+        "Ensayos Feedforward",
+        "Comparación experimental",
+        "Filtrado",
+        "Resultados y exportación"
+      ],
+      "errors": []
+    },
+    {
+      "selected_module": 5,
+      "headings_and_text": [
+        "<style>\n    .stApp {background:radial-gradient(ellipse at 85% 0%,#13253E 0%,#08111F 55%)}\n    .block-container {padding-top:2.2rem;padding-bottom:3rem;max-width:1440px}\n    h1 {letter-spacing:-1.5px;font-weight:750!important}\n    h2 {letter-spacing:-.6px}\n    h3 {color:#C6D9F5}\n    [data-testid=\"stSidebar\"] {background:#0D1B2D;border-right:1px solid #223650}\n    [data-testid=\"stMetric\"] {background:linear-gradient(135deg,#152B45,#102137);\n      border:1px solid #2B4563;border-top:3px solid #35D6BB;\n      padding:18px;border-radius:14px;box-shadow:0 8px 22px #00000018}\n    [data-testid=\"stMetricLabel\"] {color:#C6D9F5}\n    [data-testid=\"stMetricValue\"] {color:#F5F8FF}\n    [data-testid=\"stButton\"] button,[data-testid=\"stDownloadButton\"] button {\n      border-radius:10px;border:1px solid #39516E;transition:border-color .15s}\n    [data-testid=\"stButton\"] button:hover,[data-testid=\"stDownloadButton\"] button:hover {\n      border-color:#35D6BB}\n    [data-testid=\"stTabs\"] [role=\"tablist\"] {gap:8px;border-bottom:1px solid #263B55}\n    [data-testid=\"stTabs\"] [role=\"tab\"] {border-radius:8px 8px 0 0;padding:10px 16px}\n    [data-testid=\"stTabs\"] [aria-selected=\"true\"] {background:#163344;color:#5BE3CB}\n    [data-testid=\"stExpander\"] {border-color:#2B405D;border-radius:12px}\n    </style>",
+        "LABORATORIO VIRTUAL · METHODSX 102081 · 2023",
+        "Entrega final auditada · 2026-11-16",
+        "Banco de flotación",
+        "Control de nivel con bombas peristálticas · Feedback y Feedforward",
+        "● Azul: Feedback   ·   ● Verde agua: Feedback + Feedforward   ·   ● Ámbar: consigna. Las curvas también se identifican por nombre y tipo de línea.",
+        "Versión 2 · calibrar → identificar → sintonizar → controlar",
+        "Cadena de instrumentación y escalamiento PLC",
+        "Figs. 4–9 y 11 · tipo INT 0–32767 · señal configurada 4–20 mA. Conversión eléctrica ideal lineal asumida; no emula registros físicos de módulos GE ni comunicación DDE.",
+        "**Nivel real → sensor → 4–20 mA → INT → escalamiento individual → PI → INT → 4–20 mA → bomba → caudal.**",
+        "LI-1: Coeficientes rotulados publicados (redondeados). P-1: Coeficientes rotulados publicados (redondeados).",
+        "Cálculo de una muestra de 1 s del PI publicado; el estado integral se introduce explícitamente. El banco usa integración temporal y anti-windup propios; esta vista explica cada conversión sin afirmar conectividad con un PLC real.",
+        "$$\nN=\\operatorname{round}\\!\\left(\\frac{I-4}{16}32767\\right),\\quad I=4+16\\frac{N}{32767}\n$$",
+        "$$\nh=a_{LI}N+b_{LI},\\quad N_P=(Q_{orden}-b_P)/a_P,\\quad Q=a_PN_P+b_P\n$$",
+        "12.00 mA → 16384 cuentas; 16384 cuentas → 12.000244 mA",
+        "No se convierte automáticamente 32767 cuentas en 600 rpm: esa correspondencia específica no queda establecida por las curvas de caudal. Cada bomba conserva su propia calibración."
+      ],
+      "radio_labels": [
+        "Módulo"
+      ],
+      "navigation_options": [
+        "Proceso",
+        "Calibración",
+        "Identificación",
+        "Sintonización SIMC",
+        "Modelos matemáticos",
+        "Instrumentación PLC",
+        "Procedimiento guiado",
+        "Ensayos Feedback",
+        "Ensayos Feedforward",
+        "Comparación experimental",
+        "Filtrado",
+        "Resultados y exportación"
+      ],
+      "errors": []
+    },
+    {
+      "selected_module": 6,
+      "headings_and_text": [
+        "<style>\n    .stApp {background:radial-gradient(ellipse at 85% 0%,#13253E 0%,#08111F 55%)}\n    .block-container {padding-top:2.2rem;padding-bottom:3rem;max-width:1440px}\n    h1 {letter-spacing:-1.5px;font-weight:750!important}\n    h2 {letter-spacing:-.6px}\n    h3 {color:#C6D9F5}\n    [data-testid=\"stSidebar\"] {background:#0D1B2D;border-right:1px solid #223650}\n    [data-testid=\"stMetric\"] {background:linear-gradient(135deg,#152B45,#102137);\n      border:1px solid #2B4563;border-top:3px solid #35D6BB;\n      padding:18px;border-radius:14px;box-shadow:0 8px 22px #00000018}\n    [data-testid=\"stMetricLabel\"] {color:#C6D9F5}\n    [data-testid=\"stMetricValue\"] {color:#F5F8FF}\n    [data-testid=\"stButton\"] button,[data-testid=\"stDownloadButton\"] button {\n      border-radius:10px;border:1px solid #39516E;transition:border-color .15s}\n    [data-testid=\"stButton\"] button:hover,[data-testid=\"stDownloadButton\"] button:hover {\n      border-color:#35D6BB}\n    [data-testid=\"stTabs\"] [role=\"tablist\"] {gap:8px;border-bottom:1px solid #263B55}\n    [data-testid=\"stTabs\"] [role=\"tab\"] {border-radius:8px 8px 0 0;padding:10px 16px}\n    [data-testid=\"stTabs\"] [aria-selected=\"true\"] {background:#163344;color:#5BE3CB}\n    [data-testid=\"stExpander\"] {border-color:#2B405D;border-radius:12px}\n    </style>",
+        "LABORATORIO VIRTUAL · METHODSX 102081 · 2023",
+        "Entrega final auditada · 2026-11-16",
+        "Banco de flotación",
+        "Control de nivel con bombas peristálticas · Feedback y Feedforward",
+        "● Azul: Feedback   ·   ● Verde agua: Feedback + Feedforward   ·   ● Ámbar: consigna. Las curvas también se identifican por nombre y tipo de línea.",
+        "Versión 2 · calibrar → identificar → sintonizar → controlar",
+        "Procedimiento experimental guiado",
+        "Preparación de reactivos",
+        "El experimento es agua–aire sin sólidos. Concentraciones publicadas: azul de metileno 10 ppm; MIBC 330 ppm; Flottec F160–10 20 ppm; goma xantana 600 ppm. pp. 4–6. Las cantidades de solución comercial dependen de concentración, pureza y densidad, no especificadas aquí.",
+        "Cálculo derivado bajo aproximación acuosa diluida 1 ppm ≈ 1 mg/L. No son volúmenes de reactivo comercial ni una receta operativa; no se supone pureza o densidad."
+      ],
+      "radio_labels": [
+        "Módulo"
+      ],
+      "navigation_options": [
+        "Proceso",
+        "Calibración",
+        "Identificación",
+        "Sintonización SIMC",
+        "Modelos matemáticos",
+        "Instrumentación PLC",
+        "Procedimiento guiado",
+        "Ensayos Feedback",
+        "Ensayos Feedforward",
+        "Comparación experimental",
+        "Filtrado",
+        "Resultados y exportación"
+      ],
+      "errors": []
+    },
+    {
+      "selected_module": 7,
+      "headings_and_text": [
+        "<style>\n    .stApp {background:radial-gradient(ellipse at 85% 0%,#13253E 0%,#08111F 55%)}\n    .block-container {padding-top:2.2rem;padding-bottom:3rem;max-width:1440px}\n    h1 {letter-spacing:-1.5px;font-weight:750!important}\n    h2 {letter-spacing:-.6px}\n    h3 {color:#C6D9F5}\n    [data-testid=\"stSidebar\"] {background:#0D1B2D;border-right:1px solid #223650}\n    [data-testid=\"stMetric\"] {background:linear-gradient(135deg,#152B45,#102137);\n      border:1px solid #2B4563;border-top:3px solid #35D6BB;\n      padding:18px;border-radius:14px;box-shadow:0 8px 22px #00000018}\n    [data-testid=\"stMetricLabel\"] {color:#C6D9F5}\n    [data-testid=\"stMetricValue\"] {color:#F5F8FF}\n    [data-testid=\"stButton\"] button,[data-testid=\"stDownloadButton\"] button {\n      border-radius:10px;border:1px solid #39516E;transition:border-color .15s}\n    [data-testid=\"stButton\"] button:hover,[data-testid=\"stDownloadButton\"] button:hover {\n      border-color:#35D6BB}\n    [data-testid=\"stTabs\"] [role=\"tablist\"] {gap:8px;border-bottom:1px solid #263B55}\n    [data-testid=\"stTabs\"] [role=\"tab\"] {border-radius:8px 8px 0 0;padding:10px 16px}\n    [data-testid=\"stTabs\"] [aria-selected=\"true\"] {background:#163344;color:#5BE3CB}\n    [data-testid=\"stExpander\"] {border-color:#2B405D;border-radius:12px}\n    </style>",
+        "LABORATORIO VIRTUAL · METHODSX 102081 · 2023",
+        "Entrega final auditada · 2026-11-16",
+        "Banco de flotación",
+        "Control de nivel con bombas peristálticas · Feedback y Feedforward",
+        "● Azul: Feedback   ·   ● Verde agua: Feedback + Feedforward   ·   ● Ámbar: consigna. Las curvas también se identifican por nombre y tipo de línea.",
+        "Versión 2 · calibrar → identificar → sintonizar → controlar",
+        "Experimento",
+        "Perturbación P-4",
+        "Escalón de consigna",
+        "Los caudales máximos y el concentrado son supuestos editables. El artículo no proporciona su ley dinámica.",
+        "Planta identificada de Tabla 2. Su almacenamiento efectivo conserva el balance matemático, pero no representa el volumen geométrico real. Consulte Modelos matemáticos.",
+        "Reproducción de un experimento calculado a 1 s. Ambas estrategias usan el mismo escenario; la recirculación genera perturbaciones internas distintas.",
+        "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1000 340\"><defs><linearGradient id=\"water\" x2=\"0\" y2=\"1\"><stop stop-color=\"#35D6BB\" stop-opacity=\".9\"/><stop offset=\"1\" stop-color=\"#198FAD\"/></linearGradient></defs><rect width=\"1000\" height=\"340\" rx=\"18\" fill=\"#102137\"/><g fill=\"#EDF3FC\" font-family=\"Arial,sans-serif\"><rect x=\"24\" y=\"90\" width=\"130\" height=\"180\" rx=\"8\" fill=\"#0D1B2E\" stroke=\"#7FA9F5\"/><rect x=\"26\" y=\"132.6153846153846\" width=\"126\" height=\"135.3846153846154\" rx=\"5\" fill=\"url(#water)\"/><text x=\"40\" y=\"65\">T-1 · 130 L</text><text x=\"40\" y=\"190\">100.0 L</text><text x=\"35\" y=\"35\" fill=\"#7cb6c6\">Aire: 47 L/min/celda (constante)</text><path d=\"M250 90 V270 H400 V90\" fill=\"#0D1B2E\" stroke=\"#7FA9F5\" stroke-width=\"3\"/><rect x=\"252\" y=\"179.11111111111111\" width=\"146\" height=\"88.88888888888889\" fill=\"url(#water)\"/><path d=\"M255 179.11111111111111 H395\" stroke=\"#FFC76A\" stroke-width=\"2\" stroke-dasharray=\"6 4\"/><text x=\"250\" y=\"58\">C-1 · LI-1</text><text x=\"262\" y=\"240\">25.00 cm</text><text x=\"250\" y=\"295\">P-1: 44.8 L/min</text><path d=\"M400 245 H425 V135 H500\" fill=\"none\" stroke=\"#35D6BB\" stroke-width=\"4\"/><text x=\"468\" y=\"125\">→</text><circle cx=\"420\" cy=\"245\" r=\"13\" fill=\"#102536\" stroke=\"#31d3b1\" stroke-width=\"3\"/><path d=\"M413 245 l12 -6 v12 z\" fill=\"#31d3b1\"/><path d=\"M395 100 V78 H90\" fill=\"none\" stroke=\"#e9b85c\" stroke-width=\"2\"/><path d=\"M500 90 V270 H650 V90\" fill=\"#0D1B2E\" stroke=\"#7FA9F5\" stroke-width=\"3\"/><rect x=\"502\" y=\"179.11111111111111\" width=\"146\" height=\"88.88888888888889\" fill=\"url(#water)\"/><path d=\"M505 179.11111111111111 H645\" stroke=\"#FFC76A\" stroke-width=\"2\" stroke-dasharray=\"6 4\"/><text x=\"500\" y=\"58\">C-2 · LI-2</text><text x=\"512\" y=\"240\">25.00 cm</text><text x=\"500\" y=\"295\">P-2: 44.6 L/min</text><path d=\"M650 245 H675 V135 H750\" fill=\"none\" stroke=\"#35D6BB\" stroke-width=\"4\"/><text x=\"718\" y=\"125\">→</text><circle cx=\"670\" cy=\"245\" r=\"13\" fill=\"#102536\" stroke=\"#31d3b1\" stroke-width=\"3\"/><path d=\"M663 245 l12 -6 v12 z\" fill=\"#31d3b1\"/><path d=\"M645 100 V78 H90\" fill=\"none\" stroke=\"#e9b85c\" stroke-width=\"2\"/><path d=\"M750 90 V270 H900 V90\" fill=\"#0D1B2E\" stroke=\"#7FA9F5\" stroke-width=\"3\"/><rect x=\"752\" y=\"179.11111111111111\" width=\"146\" height=\"88.88888888888889\" fill=\"url(#water)\"/><path d=\"M755 179.11111111111111 H895\" stroke=\"#FFC76A\" stroke-width=\"2\" stroke-dasharray=\"6 4\"/><text x=\"750\" y=\"58\">C-3 · LI-3</text><text x=\"762\" y=\"240\">25.00 cm</text><text x=\"750\" y=\"295\">P-3: 44.4 L/min</text><circle cx=\"920\" cy=\"245\" r=\"13\" fill=\"#102536\" stroke=\"#31d3b1\" stroke-width=\"3\"/><path d=\"M913 245 l12 -6 v12 z\" fill=\"#31d3b1\"/><path d=\"M895 100 V78 H90\" fill=\"none\" stroke=\"#e9b85c\" stroke-width=\"2\"/><path d=\"M900 245 H960 V320 H90 V270\" fill=\"none\" stroke=\"#35D6BB\" stroke-width=\"4\"/><path d=\"M154 180 H200 V135 H250\" fill=\"none\" stroke=\"#35D6BB\" stroke-width=\"4\"/><circle cx=\"200\" cy=\"180\" r=\"13\" fill=\"#102137\" stroke=\"#35D6BB\" stroke-width=\"3\"/><text x=\"390\" y=\"338\">Relaves C-3 → T-1 · retorno cerrado</text><text x=\"380\" y=\"25\" fill=\"#FFC76A\">Concentrados C-1/2/3 → T-1</text><text x=\"165\" y=\"210\">P-4</text><text x=\"165\" y=\"230\">45.0</text></g></svg>",
+        "Orden P-1: 44.80 L/min · FF: +0.00 L/min",
+        "Orden P-2: 44.60 L/min · FF: +0.00 L/min",
+        "Orden P-3: 44.40 L/min · FF: +0.00 L/min",
+        "# Metodología ampliada · versión 2\n\nFuente: P. Quintanilla, D. Navia, F. Moreno, S. J. Neethling y P. R. Brito-Parada, MethodsX 10 (2023), 102081. **A methodology to implement a closed-loop feedback-feedforward level control in a laboratory-scale flotation bank using peristaltic pumps**. DOI https://doi.org/10.1016/j.mex.2023.102081. Artículo CC BY 4.0. Aplicación educativa independiente, no avalada por los autores.\n\nSe revisaron las 15 páginas del PDF y se inspeccionaron visualmente las figuras 8,9,11,12 y Tabla 2 a mayor resolución. La versión anterior se conserva en Git (`v1-control-nivel`) y en METODOLOGIA_V1.md como documentación histórica.\n\n## Procedencia y trazabilidad\n\n- **Publicado:** tablas, ecuaciones rotuladas y valores IAE de las figuras. No son series originales recuperadas.\n- **Digitalizado aproximado:** puntos leídos visualmente de Fig. 12; una sola curva visible por celda, sin fabricar repeticiones.\n- **Sintético:** modelos y ruido calculados con semilla reproducible, nunca atribuidos a mediciones de los autores.\n- **Propio:** observaciones introducidas por el docente. Se conserva su procedencia declarada, sin certificar cómo se obtuvieron.\n\n| Componente | Fuente | Implementación |\n|---|---|---|\n| Banco y retorno de concentrados | pp. 2–5, Figs. 1–4 | Proceso con balance cerrado |\n| Celdas 30×30×45 cm, A=0.09 m²; T-1=130 L | p. 2, Fig. 2 p. 4 | Auditoría y alternativa geométrica |\n| Bombas: registros, 10 s y triplicados | p. 7, Fig. 9 p. 9 | Tabla/CSV, ajuste, residuos y estadística |\n| Sensores 0–39 cm, descensos ~2 cm | pp. 6–10, Figs. 10–11 | Ajustes individuales LI-1/2/3 |\n| Aire: lectura y salida | pp. 6–8, Fig. 8 | FIC-1/2/3 y velocidad superficial jg |\n| INT 0–32767 y 4–20 mA | pp. 2,6–7 | Cadena ideal, cuantización y saturación |\n| Identificación de k′ y θ | pp. 10–12, Fig. 12, Ec. 5 | Escalones, dos puntos, tres ensayos o importación |\n| SIMC | Ecs. 2–6, pp. 8,10 | Calculadora, restricciones y alternativas PI |\n| Modelos y PI finales | Tabla 2 p. 12 | k′=−0.001018; θ=(7,6,3); Kc=(−62,−76,−85); Ti=(56,30,44) |\n| Feedforward | Ecs. 7–8, Fig. 13 p. 12 | Kff=(0.8,0.8,1), diferencia entre muestras |\n| Primer orden | Ec. 4, Ecs. 10–15 p. 14 | Modelo independiente con respuesta analítica |\n| 15 min, 1 s, mediana 10 muestras | p. 13 | Comparación dedicada y filtrado documentado |\n| IAE y resultados publicados | Ec. 9, Fig. 14 p. 13 | Métricas reales/medidas/filtradas y panel experimental separado |\n| Reactivos y tiempos | pp. 4–6,13 | Asistente de nueve etapas |\n\n## Calibración\n\nEcuaciones transcritas de las figuras, con su precisión gráfica publicada:\n\n| Instrumento | Ecuación rotulada | Salida |\n|---|---|---|\n| P-4 | Q=0.0035 N | L/min |\n| P-1 | Q=0.0029 N | L/min |\n| P-2, P-3 | Q=0.0033 N | L/min |\n| LI-1 | h=−0.0018 N+40.1363 | cm |\n| LI-2 | h=−0.0019 N+43.8823 | cm |\n| LI-3 | h=−0.0020 N+41.293 | cm |\n| Aire, lectura | Qair=0.0032 N | L/min |\n| Aire, salida | Qair=0.0031 N | L/min |\n\nN es el valor del registro INT. Los tres controladores de aire se declaran iguales en el artículo, pero los ajustes propios se guardan individualmente. Los coeficientes anteriores están redondeados y no constituyen nuevas mediciones digitalizadas.\n\nPara bombas: Q=60V/Δt con V en L, Δt=10 s por defecto y registros 5000,10000,20000,25000,28000. Se ajustan todas las observaciones, con opción de intercepto libre o cero; se muestran pendiente, intercepto, R² centrado, RMSE, residuos y media/DE muestral por punto (`ddof=1`). Se comprueba el triplicado y se rechazan identificadores repetidos. Sin observaciones, una recta publicada no recibe R² o intervalos inventados.\n\nEl intervalo de predicción OLS 95% usa distribución t y n−p grados de libertad; presupone errores independientes, normales y de varianza constante. En sensores hay error en el eje de registro: OLS es aproximación docente, no certificación metrológica. La leyenda de Fig. 11 dice intercepto fijado en cero, pero las ecuaciones visibles tienen intercepto no nulo: se muestra la contradicción. El rango nominal 0–39 cm no implica validación experimental completa de la figura; las extrapolaciones se advierten.\n\n## Identificación y SIMC\n\nLa planta individual integradora usa dy/dt=k′u(t−θ), en desviaciones respecto al punto inicial. Su entrada se mantiene constante y el escalón modifica la salida; no se aplica recirculación simultánea en este ensayo individual. Hay tres repeticiones sintéticas con ruido de semilla fija, o se importan las repeticiones existentes sin fabricar otras. Si un ensayo geométrico sale de 0–45 cm, se rechaza sin recortar la curva.\n\nk′=(y2−y1)/[(t2−t1)Δu]. La estimación de θ prolonga la recta entre los puntos hasta la mediana de las muestras de los 10 s previos al escalón. Depende de ruido, selección y estabilidad de la línea base; no es un identificador universal. Se marcan retardos extrapolados inválidos y se permite aceptar θ por inspección. El banco usa un retardo entero ≥1 s, redondeado explícitamente.\n\nSIMC: Kc=1/[k′(τc+θ)], Ti=min{τ1,4(τc+θ)}. En el límite integrador τ1→∞ se obtiene Ti=4(τc+θ). También puede explorarse τ1 finito. Se evalúan por separado τc≥θ y Ti≥4(τc+θ), según el texto; una contradicción con la operación min se informa.\n\nTabla 2 se conserva sin cambios. Para celda 3, k′=−0.001018, θ=3 y τc=8 dan Kc≈−89.30 y Ti=44 bajo el límite integrador, mientras la tabla rotula iniciales −78.1 y 52. Los Ti finales de celdas 2 y 3 tampoco cumplen esa cota usando los τc tabulados. Se muestran las diferencias; los finales publicados no se sustituyen por los iniciales. La comparación de τc usa la misma planta en ambos controladores. Guardar/aplicar un PI alternativo es explícito.\n\n## Dos modelos independientes\n\nIntegrador, Tabla 2: dy/dt=k′u(t−θ); con condiciones iniciales nulas en desviaciones, sY=k′e^(−θs)U y G=k′e^(−θs)/s. Un escalón genera rampa después del retardo.\n\nPrimer orden, Ecs. 10–15: τ1 dy/dt=−y+ku(t−θ); τ1sY=−Y+ke^(−θs)U; G=ke^(−θs)/(τ1s+1). Un escalón converge a kΔu. El artículo no proporciona una pareja independiente (k,τ1) validada: en esta comparación son supuestos editables. Elegir k=k′τ1 iguala la pendiente inicial, no toda la respuesta. El primer orden se estudia por separado y no reemplaza el balance conservativo del banco.\n\n## Geometría y discrepancia no resuelta\n\nA=0.09 m²; Vmax=40.5 L; V=0.9h L con h en cm. El balance líquido implica k′=−1/(60×0.9)=−0.0185185 cm/s por L/min. Tabla 2 publica −0.001018, unas 18.19 veces menor. Interpretar esa ganancia como un balance puramente líquido exigiría almacenamiento efectivo 16.37 L/cm o área efectiva ~1.637 m², incompatible con el área geométrica sin escalamiento o física adicional.\n\nSe consultaron la versión editorial, https://pmc.ncbi.nlm.nih.gov/articles/PMC9988547/ y repositorios Imperial/Brunel. La búsqueda por DOI y corrección no aportó una explicación verificable. Error de unidades, calibración o aireación son hipótesis, no hechos implementados. No se modifica arbitrariamente la geometría para forzar coincidencia.\n\nLas alternativas son: geometría publicada, parámetros identificados por usuario y parámetros publicados Tabla 2. La última conserva un inventario efectivo matemático para la conservación; **no representa el volumen físico del equipo**.\n\n## Banco, PI, instrumentación y filtro\n\nV_i[k+1]=V_i[k]+(Qin_i−Qout_i−Qconc_i)/60; V_T[k+1]=V_T[k]+(Qout_3+ΣQconc−Qfeed)/60. Caudales L/min, volúmenes L, tiempo s. Las salidas reales alimentan simultáneamente la siguiente celda y todo concentrado vuelve a T-1. Se impide extraer inventario inexistente y el desborde retorna al tanque. Si T-1 supera 130 L, se detiene sin perder masa por recorte silencioso.\n\nPI: u=Q0+Kc e+I+FF; I[k]=I[k−1]+Kc e[k]/Ti; e=SP−PV. Sesgo Q0, límites editables y anti-windup condicional son decisiones de ingeniería añadidas. No hay límite de velocidad de cambio. FF literal=Kff(Qin[k]−Qin[k−1]), Ecs. 7–8; la opción respecto al caudal inicial sigue marcada como extensión pedagógica.\n\nCadena PLC con ajustes individuales guardados o rectas publicadas: N=round[(I−4)32767/16], I=4+16N/32767; h=aLI N+bLI; NP=(Qorden−bP)/aP; Q=aP NP+bP. Se muestran valores ideales, cuantizados, saturados y escalados. La correspondencia eléctrica lineal es una convención ideal asumida, no emulación de códigos físicos GE. La vista calcula una muestra de PI con integral anterior editable; no se conecta a un PLC. No se inventa la relación bits/rpm a partir del rango 0–600 rpm.\n\nEl banco permite ruido gaussiano reproducible; ambas estrategias usan exactamente la misma realización. Mediana causal de N muestras incluida la actual, con relleno inicial al nivel inicial. Para N par se promedian los dos valores centrales. No se afirma equivalencia exacta con medfilt1 ni sus bordes. Se muestran señales real, medida, filtrada, sus errores y sus IAE trapezoidales; el filtro añade retraso y no garantiza mejorar seguimiento.\n\n## Protocolo de Fig. 14 y alcance\n\nEl ensayo dedicado fija entrada C-1=45 L/min; entradas C-2/C-3 son los relaves previos, 900 s, 1 s y mediana 10. Sus niveles iniciales y escalones de consigna son didácticos, no las series originales. IAE experimentales rotulados, cm·s: C-1 198/164, C-2 325/187, C-3 260/221 para FB/FB+FF, mostrados separadamente. Fig. 14 ilustra cerca de 600 s aunque el texto declara 15 min; no se inventan datos faltantes. Los autores ofrecen originales bajo solicitud. Importar curvas propias o digitalizadas no equivale a validación experimental contra las series de los autores.\n\nConcentrado constante 0.2 L/min por celda, límite 100 L/min, inventario T-1 inicial 100 L, sesgo, ubicación de retardos y lógica de desborde siguen como supuestos editables. No se simulan holdup, cinética de espuma, recuperación mineral, cámaras o DDE. El aire es constante en el banco; calibración y jg son módulos funcionales separados.\n\nLos ajustes se guardan en sesión: calibraciones→PLC; identificación→planta/SIMC; SIMC→PI alternativo. Los parámetros JSON pueden exportarse/restaurarse y los CSV se descargan con manifiesto de procedencia. No hay persistencia remota de mediciones propias. Las pruebas matemáticas y de interfaz se separan de comprobaciones de transcripción; ninguna sustituye validar una planta física."
+      ],
+      "radio_labels": [
+        "Módulo",
+        "Estrategia visible"
+      ],
+      "navigation_options": [
+        "Proceso",
+        "Calibración",
+        "Identificación",
+        "Sintonización SIMC",
+        "Modelos matemáticos",
+        "Instrumentación PLC",
+        "Procedimiento guiado",
+        "Ensayos Feedback",
+        "Ensayos Feedforward",
+        "Comparación experimental",
+        "Filtrado",
+        "Resultados y exportación"
+      ],
+      "errors": []
+    },
+    {
+      "selected_module": 8,
+      "headings_and_text": [
+        "<style>\n    .stApp {background:radial-gradient(ellipse at 85% 0%,#13253E 0%,#08111F 55%)}\n    .block-container {padding-top:2.2rem;padding-bottom:3rem;max-width:1440px}\n    h1 {letter-spacing:-1.5px;font-weight:750!important}\n    h2 {letter-spacing:-.6px}\n    h3 {color:#C6D9F5}\n    [data-testid=\"stSidebar\"] {background:#0D1B2D;border-right:1px solid #223650}\n    [data-testid=\"stMetric\"] {background:linear-gradient(135deg,#152B45,#102137);\n      border:1px solid #2B4563;border-top:3px solid #35D6BB;\n      padding:18px;border-radius:14px;box-shadow:0 8px 22px #00000018}\n    [data-testid=\"stMetricLabel\"] {color:#C6D9F5}\n    [data-testid=\"stMetricValue\"] {color:#F5F8FF}\n    [data-testid=\"stButton\"] button,[data-testid=\"stDownloadButton\"] button {\n      border-radius:10px;border:1px solid #39516E;transition:border-color .15s}\n    [data-testid=\"stButton\"] button:hover,[data-testid=\"stDownloadButton\"] button:hover {\n      border-color:#35D6BB}\n    [data-testid=\"stTabs\"] [role=\"tablist\"] {gap:8px;border-bottom:1px solid #263B55}\n    [data-testid=\"stTabs\"] [role=\"tab\"] {border-radius:8px 8px 0 0;padding:10px 16px}\n    [data-testid=\"stTabs\"] [aria-selected=\"true\"] {background:#163344;color:#5BE3CB}\n    [data-testid=\"stExpander\"] {border-color:#2B405D;border-radius:12px}\n    </style>",
+        "LABORATORIO VIRTUAL · METHODSX 102081 · 2023",
+        "Entrega final auditada · 2026-11-16",
+        "Banco de flotación",
+        "Control de nivel con bombas peristálticas · Feedback y Feedforward",
+        "● Azul: Feedback   ·   ● Verde agua: Feedback + Feedforward   ·   ● Ámbar: consigna. Las curvas también se identifican por nombre y tipo de línea.",
+        "Versión 2 · calibrar → identificar → sintonizar → controlar",
+        "Experimento",
+        "Perturbación P-4",
+        "Escalón de consigna",
+        "Los caudales máximos y el concentrado son supuestos editables. El artículo no proporciona su ley dinámica.",
+        "Planta identificada de Tabla 2. Su almacenamiento efectivo conserva el balance matemático, pero no representa el volumen geométrico real. Consulte Modelos matemáticos.",
+        "Reproducción de un experimento calculado a 1 s. Ambas estrategias usan el mismo escenario; la recirculación genera perturbaciones internas distintas.",
+        "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1000 340\"><defs><linearGradient id=\"water\" x2=\"0\" y2=\"1\"><stop stop-color=\"#35D6BB\" stop-opacity=\".9\"/><stop offset=\"1\" stop-color=\"#198FAD\"/></linearGradient></defs><rect width=\"1000\" height=\"340\" rx=\"18\" fill=\"#102137\"/><g fill=\"#EDF3FC\" font-family=\"Arial,sans-serif\"><rect x=\"24\" y=\"90\" width=\"130\" height=\"180\" rx=\"8\" fill=\"#0D1B2E\" stroke=\"#7FA9F5\"/><rect x=\"26\" y=\"132.6153846153846\" width=\"126\" height=\"135.3846153846154\" rx=\"5\" fill=\"url(#water)\"/><text x=\"40\" y=\"65\">T-1 · 130 L</text><text x=\"40\" y=\"190\">100.0 L</text><text x=\"35\" y=\"35\" fill=\"#7cb6c6\">Aire: 47 L/min/celda (constante)</text><path d=\"M250 90 V270 H400 V90\" fill=\"#0D1B2E\" stroke=\"#7FA9F5\" stroke-width=\"3\"/><rect x=\"252\" y=\"179.11111111111111\" width=\"146\" height=\"88.88888888888889\" fill=\"url(#water)\"/><path d=\"M255 179.11111111111111 H395\" stroke=\"#FFC76A\" stroke-width=\"2\" stroke-dasharray=\"6 4\"/><text x=\"250\" y=\"58\">C-1 · LI-1</text><text x=\"262\" y=\"240\">25.00 cm</text><text x=\"250\" y=\"295\">P-1: 44.8 L/min</text><path d=\"M400 245 H425 V135 H500\" fill=\"none\" stroke=\"#35D6BB\" stroke-width=\"4\"/><text x=\"468\" y=\"125\">→</text><circle cx=\"420\" cy=\"245\" r=\"13\" fill=\"#102536\" stroke=\"#31d3b1\" stroke-width=\"3\"/><path d=\"M413 245 l12 -6 v12 z\" fill=\"#31d3b1\"/><path d=\"M395 100 V78 H90\" fill=\"none\" stroke=\"#e9b85c\" stroke-width=\"2\"/><path d=\"M500 90 V270 H650 V90\" fill=\"#0D1B2E\" stroke=\"#7FA9F5\" stroke-width=\"3\"/><rect x=\"502\" y=\"179.11111111111111\" width=\"146\" height=\"88.88888888888889\" fill=\"url(#water)\"/><path d=\"M505 179.11111111111111 H645\" stroke=\"#FFC76A\" stroke-width=\"2\" stroke-dasharray=\"6 4\"/><text x=\"500\" y=\"58\">C-2 · LI-2</text><text x=\"512\" y=\"240\">25.00 cm</text><text x=\"500\" y=\"295\">P-2: 44.6 L/min</text><path d=\"M650 245 H675 V135 H750\" fill=\"none\" stroke=\"#35D6BB\" stroke-width=\"4\"/><text x=\"718\" y=\"125\">→</text><circle cx=\"670\" cy=\"245\" r=\"13\" fill=\"#102536\" stroke=\"#31d3b1\" stroke-width=\"3\"/><path d=\"M663 245 l12 -6 v12 z\" fill=\"#31d3b1\"/><path d=\"M645 100 V78 H90\" fill=\"none\" stroke=\"#e9b85c\" stroke-width=\"2\"/><path d=\"M750 90 V270 H900 V90\" fill=\"#0D1B2E\" stroke=\"#7FA9F5\" stroke-width=\"3\"/><rect x=\"752\" y=\"179.11111111111111\" width=\"146\" height=\"88.88888888888889\" fill=\"url(#water)\"/><path d=\"M755 179.11111111111111 H895\" stroke=\"#FFC76A\" stroke-width=\"2\" stroke-dasharray=\"6 4\"/><text x=\"750\" y=\"58\">C-3 · LI-3</text><text x=\"762\" y=\"240\">25.00 cm</text><text x=\"750\" y=\"295\">P-3: 44.4 L/min</text><circle cx=\"920\" cy=\"245\" r=\"13\" fill=\"#102536\" stroke=\"#31d3b1\" stroke-width=\"3\"/><path d=\"M913 245 l12 -6 v12 z\" fill=\"#31d3b1\"/><path d=\"M895 100 V78 H90\" fill=\"none\" stroke=\"#e9b85c\" stroke-width=\"2\"/><path d=\"M900 245 H960 V320 H90 V270\" fill=\"none\" stroke=\"#35D6BB\" stroke-width=\"4\"/><path d=\"M154 180 H200 V135 H250\" fill=\"none\" stroke=\"#35D6BB\" stroke-width=\"4\"/><circle cx=\"200\" cy=\"180\" r=\"13\" fill=\"#102137\" stroke=\"#35D6BB\" stroke-width=\"3\"/><text x=\"390\" y=\"338\">Relaves C-3 → T-1 · retorno cerrado</text><text x=\"380\" y=\"25\" fill=\"#FFC76A\">Concentrados C-1/2/3 → T-1</text><text x=\"165\" y=\"210\">P-4</text><text x=\"165\" y=\"230\">45.0</text></g></svg>",
+        "Orden P-1: 44.80 L/min · FF: +0.00 L/min",
+        "Orden P-2: 44.60 L/min · FF: +0.00 L/min",
+        "Orden P-3: 44.40 L/min · FF: +0.00 L/min",
+        "# Metodología ampliada · versión 2\n\nFuente: P. Quintanilla, D. Navia, F. Moreno, S. J. Neethling y P. R. Brito-Parada, MethodsX 10 (2023), 102081. **A methodology to implement a closed-loop feedback-feedforward level control in a laboratory-scale flotation bank using peristaltic pumps**. DOI https://doi.org/10.1016/j.mex.2023.102081. Artículo CC BY 4.0. Aplicación educativa independiente, no avalada por los autores.\n\nSe revisaron las 15 páginas del PDF y se inspeccionaron visualmente las figuras 8,9,11,12 y Tabla 2 a mayor resolución. La versión anterior se conserva en Git (`v1-control-nivel`) y en METODOLOGIA_V1.md como documentación histórica.\n\n## Procedencia y trazabilidad\n\n- **Publicado:** tablas, ecuaciones rotuladas y valores IAE de las figuras. No son series originales recuperadas.\n- **Digitalizado aproximado:** puntos leídos visualmente de Fig. 12; una sola curva visible por celda, sin fabricar repeticiones.\n- **Sintético:** modelos y ruido calculados con semilla reproducible, nunca atribuidos a mediciones de los autores.\n- **Propio:** observaciones introducidas por el docente. Se conserva su procedencia declarada, sin certificar cómo se obtuvieron.\n\n| Componente | Fuente | Implementación |\n|---|---|---|\n| Banco y retorno de concentrados | pp. 2–5, Figs. 1–4 | Proceso con balance cerrado |\n| Celdas 30×30×45 cm, A=0.09 m²; T-1=130 L | p. 2, Fig. 2 p. 4 | Auditoría y alternativa geométrica |\n| Bombas: registros, 10 s y triplicados | p. 7, Fig. 9 p. 9 | Tabla/CSV, ajuste, residuos y estadística |\n| Sensores 0–39 cm, descensos ~2 cm | pp. 6–10, Figs. 10–11 | Ajustes individuales LI-1/2/3 |\n| Aire: lectura y salida | pp. 6–8, Fig. 8 | FIC-1/2/3 y velocidad superficial jg |\n| INT 0–32767 y 4–20 mA | pp. 2,6–7 | Cadena ideal, cuantización y saturación |\n| Identificación de k′ y θ | pp. 10–12, Fig. 12, Ec. 5 | Escalones, dos puntos, tres ensayos o importación |\n| SIMC | Ecs. 2–6, pp. 8,10 | Calculadora, restricciones y alternativas PI |\n| Modelos y PI finales | Tabla 2 p. 12 | k′=−0.001018; θ=(7,6,3); Kc=(−62,−76,−85); Ti=(56,30,44) |\n| Feedforward | Ecs. 7–8, Fig. 13 p. 12 | Kff=(0.8,0.8,1), diferencia entre muestras |\n| Primer orden | Ec. 4, Ecs. 10–15 p. 14 | Modelo independiente con respuesta analítica |\n| 15 min, 1 s, mediana 10 muestras | p. 13 | Comparación dedicada y filtrado documentado |\n| IAE y resultados publicados | Ec. 9, Fig. 14 p. 13 | Métricas reales/medidas/filtradas y panel experimental separado |\n| Reactivos y tiempos | pp. 4–6,13 | Asistente de nueve etapas |\n\n## Calibración\n\nEcuaciones transcritas de las figuras, con su precisión gráfica publicada:\n\n| Instrumento | Ecuación rotulada | Salida |\n|---|---|---|\n| P-4 | Q=0.0035 N | L/min |\n| P-1 | Q=0.0029 N | L/min |\n| P-2, P-3 | Q=0.0033 N | L/min |\n| LI-1 | h=−0.0018 N+40.1363 | cm |\n| LI-2 | h=−0.0019 N+43.8823 | cm |\n| LI-3 | h=−0.0020 N+41.293 | cm |\n| Aire, lectura | Qair=0.0032 N | L/min |\n| Aire, salida | Qair=0.0031 N | L/min |\n\nN es el valor del registro INT. Los tres controladores de aire se declaran iguales en el artículo, pero los ajustes propios se guardan individualmente. Los coeficientes anteriores están redondeados y no constituyen nuevas mediciones digitalizadas.\n\nPara bombas: Q=60V/Δt con V en L, Δt=10 s por defecto y registros 5000,10000,20000,25000,28000. Se ajustan todas las observaciones, con opción de intercepto libre o cero; se muestran pendiente, intercepto, R² centrado, RMSE, residuos y media/DE muestral por punto (`ddof=1`). Se comprueba el triplicado y se rechazan identificadores repetidos. Sin observaciones, una recta publicada no recibe R² o intervalos inventados.\n\nEl intervalo de predicción OLS 95% usa distribución t y n−p grados de libertad; presupone errores independientes, normales y de varianza constante. En sensores hay error en el eje de registro: OLS es aproximación docente, no certificación metrológica. La leyenda de Fig. 11 dice intercepto fijado en cero, pero las ecuaciones visibles tienen intercepto no nulo: se muestra la contradicción. El rango nominal 0–39 cm no implica validación experimental completa de la figura; las extrapolaciones se advierten.\n\n## Identificación y SIMC\n\nLa planta individual integradora usa dy/dt=k′u(t−θ), en desviaciones respecto al punto inicial. Su entrada se mantiene constante y el escalón modifica la salida; no se aplica recirculación simultánea en este ensayo individual. Hay tres repeticiones sintéticas con ruido de semilla fija, o se importan las repeticiones existentes sin fabricar otras. Si un ensayo geométrico sale de 0–45 cm, se rechaza sin recortar la curva.\n\nk′=(y2−y1)/[(t2−t1)Δu]. La estimación de θ prolonga la recta entre los puntos hasta la mediana de las muestras de los 10 s previos al escalón. Depende de ruido, selección y estabilidad de la línea base; no es un identificador universal. Se marcan retardos extrapolados inválidos y se permite aceptar θ por inspección. El banco usa un retardo entero ≥1 s, redondeado explícitamente.\n\nSIMC: Kc=1/[k′(τc+θ)], Ti=min{τ1,4(τc+θ)}. En el límite integrador τ1→∞ se obtiene Ti=4(τc+θ). También puede explorarse τ1 finito. Se evalúan por separado τc≥θ y Ti≥4(τc+θ), según el texto; una contradicción con la operación min se informa.\n\nTabla 2 se conserva sin cambios. Para celda 3, k′=−0.001018, θ=3 y τc=8 dan Kc≈−89.30 y Ti=44 bajo el límite integrador, mientras la tabla rotula iniciales −78.1 y 52. Los Ti finales de celdas 2 y 3 tampoco cumplen esa cota usando los τc tabulados. Se muestran las diferencias; los finales publicados no se sustituyen por los iniciales. La comparación de τc usa la misma planta en ambos controladores. Guardar/aplicar un PI alternativo es explícito.\n\n## Dos modelos independientes\n\nIntegrador, Tabla 2: dy/dt=k′u(t−θ); con condiciones iniciales nulas en desviaciones, sY=k′e^(−θs)U y G=k′e^(−θs)/s. Un escalón genera rampa después del retardo.\n\nPrimer orden, Ecs. 10–15: τ1 dy/dt=−y+ku(t−θ); τ1sY=−Y+ke^(−θs)U; G=ke^(−θs)/(τ1s+1). Un escalón converge a kΔu. El artículo no proporciona una pareja independiente (k,τ1) validada: en esta comparación son supuestos editables. Elegir k=k′τ1 iguala la pendiente inicial, no toda la respuesta. El primer orden se estudia por separado y no reemplaza el balance conservativo del banco.\n\n## Geometría y discrepancia no resuelta\n\nA=0.09 m²; Vmax=40.5 L; V=0.9h L con h en cm. El balance líquido implica k′=−1/(60×0.9)=−0.0185185 cm/s por L/min. Tabla 2 publica −0.001018, unas 18.19 veces menor. Interpretar esa ganancia como un balance puramente líquido exigiría almacenamiento efectivo 16.37 L/cm o área efectiva ~1.637 m², incompatible con el área geométrica sin escalamiento o física adicional.\n\nSe consultaron la versión editorial, https://pmc.ncbi.nlm.nih.gov/articles/PMC9988547/ y repositorios Imperial/Brunel. La búsqueda por DOI y corrección no aportó una explicación verificable. Error de unidades, calibración o aireación son hipótesis, no hechos implementados. No se modifica arbitrariamente la geometría para forzar coincidencia.\n\nLas alternativas son: geometría publicada, parámetros identificados por usuario y parámetros publicados Tabla 2. La última conserva un inventario efectivo matemático para la conservación; **no representa el volumen físico del equipo**.\n\n## Banco, PI, instrumentación y filtro\n\nV_i[k+1]=V_i[k]+(Qin_i−Qout_i−Qconc_i)/60; V_T[k+1]=V_T[k]+(Qout_3+ΣQconc−Qfeed)/60. Caudales L/min, volúmenes L, tiempo s. Las salidas reales alimentan simultáneamente la siguiente celda y todo concentrado vuelve a T-1. Se impide extraer inventario inexistente y el desborde retorna al tanque. Si T-1 supera 130 L, se detiene sin perder masa por recorte silencioso.\n\nPI: u=Q0+Kc e+I+FF; I[k]=I[k−1]+Kc e[k]/Ti; e=SP−PV. Sesgo Q0, límites editables y anti-windup condicional son decisiones de ingeniería añadidas. No hay límite de velocidad de cambio. FF literal=Kff(Qin[k]−Qin[k−1]), Ecs. 7–8; la opción respecto al caudal inicial sigue marcada como extensión pedagógica.\n\nCadena PLC con ajustes individuales guardados o rectas publicadas: N=round[(I−4)32767/16], I=4+16N/32767; h=aLI N+bLI; NP=(Qorden−bP)/aP; Q=aP NP+bP. Se muestran valores ideales, cuantizados, saturados y escalados. La correspondencia eléctrica lineal es una convención ideal asumida, no emulación de códigos físicos GE. La vista calcula una muestra de PI con integral anterior editable; no se conecta a un PLC. No se inventa la relación bits/rpm a partir del rango 0–600 rpm.\n\nEl banco permite ruido gaussiano reproducible; ambas estrategias usan exactamente la misma realización. Mediana causal de N muestras incluida la actual, con relleno inicial al nivel inicial. Para N par se promedian los dos valores centrales. No se afirma equivalencia exacta con medfilt1 ni sus bordes. Se muestran señales real, medida, filtrada, sus errores y sus IAE trapezoidales; el filtro añade retraso y no garantiza mejorar seguimiento.\n\n## Protocolo de Fig. 14 y alcance\n\nEl ensayo dedicado fija entrada C-1=45 L/min; entradas C-2/C-3 son los relaves previos, 900 s, 1 s y mediana 10. Sus niveles iniciales y escalones de consigna son didácticos, no las series originales. IAE experimentales rotulados, cm·s: C-1 198/164, C-2 325/187, C-3 260/221 para FB/FB+FF, mostrados separadamente. Fig. 14 ilustra cerca de 600 s aunque el texto declara 15 min; no se inventan datos faltantes. Los autores ofrecen originales bajo solicitud. Importar curvas propias o digitalizadas no equivale a validación experimental contra las series de los autores.\n\nConcentrado constante 0.2 L/min por celda, límite 100 L/min, inventario T-1 inicial 100 L, sesgo, ubicación de retardos y lógica de desborde siguen como supuestos editables. No se simulan holdup, cinética de espuma, recuperación mineral, cámaras o DDE. El aire es constante en el banco; calibración y jg son módulos funcionales separados.\n\nLos ajustes se guardan en sesión: calibraciones→PLC; identificación→planta/SIMC; SIMC→PI alternativo. Los parámetros JSON pueden exportarse/restaurarse y los CSV se descargan con manifiesto de procedencia. No hay persistencia remota de mediciones propias. Las pruebas matemáticas y de interfaz se separan de comprobaciones de transcripción; ninguna sustituye validar una planta física."
+      ],
+      "radio_labels": [
+        "Módulo",
+        "Estrategia visible"
+      ],
+      "navigation_options": [
+        "Proceso",
+        "Calibración",
+        "Identificación",
+        "Sintonización SIMC",
+        "Modelos matemáticos",
+        "Instrumentación PLC",
+        "Procedimiento guiado",
+        "Ensayos Feedback",
+        "Ensayos Feedforward",
+        "Comparación experimental",
+        "Filtrado",
+        "Resultados y exportación"
+      ],
+      "errors": []
+    },
+    {
+      "selected_module": 9,
+      "headings_and_text": [
+        "<style>\n    .stApp {background:radial-gradient(ellipse at 85% 0%,#13253E 0%,#08111F 55%)}\n    .block-container {padding-top:2.2rem;padding-bottom:3rem;max-width:1440px}\n    h1 {letter-spacing:-1.5px;font-weight:750!important}\n    h2 {letter-spacing:-.6px}\n    h3 {color:#C6D9F5}\n    [data-testid=\"stSidebar\"] {background:#0D1B2D;border-right:1px solid #223650}\n    [data-testid=\"stMetric\"] {background:linear-gradient(135deg,#152B45,#102137);\n      border:1px solid #2B4563;border-top:3px solid #35D6BB;\n      padding:18px;border-radius:14px;box-shadow:0 8px 22px #00000018}\n    [data-testid=\"stMetricLabel\"] {color:#C6D9F5}\n    [data-testid=\"stMetricValue\"] {color:#F5F8FF}\n    [data-testid=\"stButton\"] button,[data-testid=\"stDownloadButton\"] button {\n      border-radius:10px;border:1px solid #39516E;transition:border-color .15s}\n    [data-testid=\"stButton\"] button:hover,[data-testid=\"stDownloadButton\"] button:hover {\n      border-color:#35D6BB}\n    [data-testid=\"stTabs\"] [role=\"tablist\"] {gap:8px;border-bottom:1px solid #263B55}\n    [data-testid=\"stTabs\"] [role=\"tab\"] {border-radius:8px 8px 0 0;padding:10px 16px}\n    [data-testid=\"stTabs\"] [aria-selected=\"true\"] {background:#163344;color:#5BE3CB}\n    [data-testid=\"stExpander\"] {border-color:#2B405D;border-radius:12px}\n    </style>",
+        "LABORATORIO VIRTUAL · METHODSX 102081 · 2023",
+        "Entrega final auditada · 2026-11-16",
+        "Banco de flotación",
+        "Control de nivel con bombas peristálticas · Feedback y Feedforward",
+        "● Azul: Feedback   ·   ● Verde agua: Feedback + Feedforward   ·   ● Ámbar: consigna. Las curvas también se identifican por nombre y tipo de línea.",
+        "Versión 2 · calibrar → identificar → sintonizar → controlar",
+        "Comparación experimental · ensayo inspirado en Fig. 14",
+        "Inventario inicial T-1 supuesto: 60 L, para alojar el retorno de los tres escalones de nivel sin exceder 130 L. No es una condición inicial publicada.",
+        "Valores experimentales rotulados en Fig. 14, p. 13. No son métricas del simulador. La figura ilustra aproximadamente 600 s aunque el texto declara ensayos de 15 min; no se interpreta la tabla como una serie de 900 s disponible."
+      ],
+      "radio_labels": [
+        "Módulo",
+        "Procedencia del CSV comparativo"
+      ],
+      "navigation_options": [
+        "Proceso",
+        "Calibración",
+        "Identificación",
+        "Sintonización SIMC",
+        "Modelos matemáticos",
+        "Instrumentación PLC",
+        "Procedimiento guiado",
+        "Ensayos Feedback",
+        "Ensayos Feedforward",
+        "Comparación experimental",
+        "Filtrado",
+        "Resultados y exportación"
+      ],
+      "errors": []
+    },
+    {
+      "selected_module": 10,
+      "headings_and_text": [
+        "<style>\n    .stApp {background:radial-gradient(ellipse at 85% 0%,#13253E 0%,#08111F 55%)}\n    .block-container {padding-top:2.2rem;padding-bottom:3rem;max-width:1440px}\n    h1 {letter-spacing:-1.5px;font-weight:750!important}\n    h2 {letter-spacing:-.6px}\n    h3 {color:#C6D9F5}\n    [data-testid=\"stSidebar\"] {background:#0D1B2D;border-right:1px solid #223650}\n    [data-testid=\"stMetric\"] {background:linear-gradient(135deg,#152B45,#102137);\n      border:1px solid #2B4563;border-top:3px solid #35D6BB;\n      padding:18px;border-radius:14px;box-shadow:0 8px 22px #00000018}\n    [data-testid=\"stMetricLabel\"] {color:#C6D9F5}\n    [data-testid=\"stMetricValue\"] {color:#F5F8FF}\n    [data-testid=\"stButton\"] button,[data-testid=\"stDownloadButton\"] button {\n      border-radius:10px;border:1px solid #39516E;transition:border-color .15s}\n    [data-testid=\"stButton\"] button:hover,[data-testid=\"stDownloadButton\"] button:hover {\n      border-color:#35D6BB}\n    [data-testid=\"stTabs\"] [role=\"tablist\"] {gap:8px;border-bottom:1px solid #263B55}\n    [data-testid=\"stTabs\"] [role=\"tab\"] {border-radius:8px 8px 0 0;padding:10px 16px}\n    [data-testid=\"stTabs\"] [aria-selected=\"true\"] {background:#163344;color:#5BE3CB}\n    [data-testid=\"stExpander\"] {border-color:#2B405D;border-radius:12px}\n    </style>",
+        "LABORATORIO VIRTUAL · METHODSX 102081 · 2023",
+        "Entrega final auditada · 2026-11-16",
+        "Banco de flotación",
+        "Control de nivel con bombas peristálticas · Feedback y Feedforward",
+        "● Azul: Feedback   ·   ● Verde agua: Feedback + Feedforward   ·   ● Ámbar: consigna. Las curvas también se identifican por nombre y tipo de línea.",
+        "Versión 2 · calibrar → identificar → sintonizar → controlar",
+        "Filtrado, error e IAE de cada señal",
+        "El filtro atenúa picos y también añade retraso: puede reducir el error causado por ruido y aumentar el error de seguimiento. La dirección del cambio de IAE se calcula, no se presupone."
+      ],
+      "radio_labels": [
+        "Módulo",
+        "Señal de entrada"
+      ],
+      "navigation_options": [
+        "Proceso",
+        "Calibración",
+        "Identificación",
+        "Sintonización SIMC",
+        "Modelos matemáticos",
+        "Instrumentación PLC",
+        "Procedimiento guiado",
+        "Ensayos Feedback",
+        "Ensayos Feedforward",
+        "Comparación experimental",
+        "Filtrado",
+        "Resultados y exportación"
+      ],
+      "errors": []
+    },
+    {
+      "selected_module": 11,
+      "headings_and_text": [
+        "<style>\n    .stApp {background:radial-gradient(ellipse at 85% 0%,#13253E 0%,#08111F 55%)}\n    .block-container {padding-top:2.2rem;padding-bottom:3rem;max-width:1440px}\n    h1 {letter-spacing:-1.5px;font-weight:750!important}\n    h2 {letter-spacing:-.6px}\n    h3 {color:#C6D9F5}\n    [data-testid=\"stSidebar\"] {background:#0D1B2D;border-right:1px solid #223650}\n    [data-testid=\"stMetric\"] {background:linear-gradient(135deg,#152B45,#102137);\n      border:1px solid #2B4563;border-top:3px solid #35D6BB;\n      padding:18px;border-radius:14px;box-shadow:0 8px 22px #00000018}\n    [data-testid=\"stMetricLabel\"] {color:#C6D9F5}\n    [data-testid=\"stMetricValue\"] {color:#F5F8FF}\n    [data-testid=\"stButton\"] button,[data-testid=\"stDownloadButton\"] button {\n      border-radius:10px;border:1px solid #39516E;transition:border-color .15s}\n    [data-testid=\"stButton\"] button:hover,[data-testid=\"stDownloadButton\"] button:hover {\n      border-color:#35D6BB}\n    [data-testid=\"stTabs\"] [role=\"tablist\"] {gap:8px;border-bottom:1px solid #263B55}\n    [data-testid=\"stTabs\"] [role=\"tab\"] {border-radius:8px 8px 0 0;padding:10px 16px}\n    [data-testid=\"stTabs\"] [aria-selected=\"true\"] {background:#163344;color:#5BE3CB}\n    [data-testid=\"stExpander\"] {border-color:#2B405D;border-radius:12px}\n    </style>",
+        "LABORATORIO VIRTUAL · METHODSX 102081 · 2023",
+        "Entrega final auditada · 2026-11-16",
+        "Banco de flotación",
+        "Control de nivel con bombas peristálticas · Feedback y Feedforward",
+        "● Azul: Feedback   ·   ● Verde agua: Feedback + Feedforward   ·   ● Ámbar: consigna. Las curvas también se identifican por nombre y tipo de línea.",
+        "Versión 2 · calibrar → identificar → sintonizar → controlar",
+        "Resultados, parámetros y exportación reproducible",
+        "# Dictamen de replicación para revisión docente\n\n## Conclusión\n\n**Se puede reproducir computacionalmente la metodología publicada y explorar sus modelos. No se puede certificar una réplica numérica exacta del experimento de los autores con la información actualmente disponible.** Las pruebas de software no acreditan equivalencia experimental. Este dictamen no es una certificación emitida por el docente ni por los autores.\n\nEl artículo de Quintanilla et al., MethodsX 10 (2023),102081, DOI https://doi.org/10.1016/j.mex.2023.102081 describe una implementación experimental de control con bombas, sensores, PLC y MATLAB. No se entregó una simulación original ejecutable que pueda copiarse o compararse directamente. En p.15 los autores indican que los datos se ofrecen bajo solicitud.\n\n## Matriz de cumplimiento\n\n| Requisito | Estado verificable | Límite |\n|---|---|---|\n| Calibración, triplicados y unidades | Implementados con importación/edición y regresión | Ejemplos sintéticos y coeficientes rotulados, no triplicados originales |\n| Identificación k′/θ | Implementada y verificada con soluciones conocidas | Fig.12 digitalizada es aproximada y de una sola curva por celda |\n| SIMC, PI finales y FF | Ecuaciones y tablas conservadas; cálculo y comparación funcionales | Inconsistencias del artículo se muestran sin reemplazar cifras |\n| Banco de tres celdas y recirculación | Balance conservativo, ambas estrategias y protocolo dedicado | Concentrado, inventario y algunos límites son supuestos explícitos |\n| Integrador y primer orden | Dos modelos independientes con ecuaciones y respuestas | El primer orden necesita parámetros no publicados como pareja validada |\n| Filtro e IAE | Implementados y probados | Mediana causal; no se afirma equivalencia exacta de bordes MATLAB |\n| Instrumentación | Conversión ideal 4–20 mA/INT y ajustes individuales | No emula hardware GE, DDE ni toda la mecánica de bombas |\n| Igualdad con curvas originales | No demostrada | Faltan series completas, código y resolución de discrepancias |\n\n## Información necesaria para exigir «tal cual»\n\n1. Código MATLAB original y definición exacta de la actualización PI/FF, sesgos, saturaciones y condiciones iniciales.\n2. Series temporales originales de consignas, niveles sin filtrar/filtrados, caudales y señales de cada ensayo y repetición.\n3. Calibraciones originales sin redondear y sus observaciones por triplicado.\n4. Tratamiento exacto de bordes y ejecución en línea de medfilt1, así como marcas temporales.\n5. Aclaración de la discrepancia entre A=0.09 m² y k′=−0.001018, y de los parámetros iniciales de celda 3 en Tabla 2.\n\nEl docente debe precisar si acepta reproducción de la metodología con supuestos declarados o exige coincidencia de curvas. En el segundo caso, las fuentes anteriores son necesarias: cambiar colores o aprobar pruebas unitarias no suple esos datos.\n\n## Validación disponible\n\nLa entrega incluye pruebas matemáticas, comprobaciones de transcripción, pruebas de interfaz, ensayo del ZIP descomprimido y verificación de la aplicación pública. Sus resultados ejecutados están en validation/INFORME.md y archivos JUnit. La actualización visual usa azul para FB, verde agua para FB+FF y ámbar discontinuo para SP; nombres y estilos evitan depender solo del color. Esa presentación no modifica las ecuaciones ni convierte datos sintéticos en experimentales.",
+        "Los datos propios y ajustes se conservan en la sesión del navegador. Exporte antes de cerrar; no hay base de datos ni almacenamiento permanente de mediciones en el servidor.",
+        "# Metodología ampliada · versión 2\n\nFuente: P. Quintanilla, D. Navia, F. Moreno, S. J. Neethling y P. R. Brito-Parada, MethodsX 10 (2023), 102081. **A methodology to implement a closed-loop feedback-feedforward level control in a laboratory-scale flotation bank using peristaltic pumps**. DOI https://doi.org/10.1016/j.mex.2023.102081. Artículo CC BY 4.0. Aplicación educativa independiente, no avalada por los autores.\n\nSe revisaron las 15 páginas del PDF y se inspeccionaron visualmente las figuras 8,9,11,12 y Tabla 2 a mayor resolución. La versión anterior se conserva en Git (`v1-control-nivel`) y en METODOLOGIA_V1.md como documentación histórica.\n\n## Procedencia y trazabilidad\n\n- **Publicado:** tablas, ecuaciones rotuladas y valores IAE de las figuras. No son series originales recuperadas.\n- **Digitalizado aproximado:** puntos leídos visualmente de Fig. 12; una sola curva visible por celda, sin fabricar repeticiones.\n- **Sintético:** modelos y ruido calculados con semilla reproducible, nunca atribuidos a mediciones de los autores.\n- **Propio:** observaciones introducidas por el docente. Se conserva su procedencia declarada, sin certificar cómo se obtuvieron.\n\n| Componente | Fuente | Implementación |\n|---|---|---|\n| Banco y retorno de concentrados | pp. 2–5, Figs. 1–4 | Proceso con balance cerrado |\n| Celdas 30×30×45 cm, A=0.09 m²; T-1=130 L | p. 2, Fig. 2 p. 4 | Auditoría y alternativa geométrica |\n| Bombas: registros, 10 s y triplicados | p. 7, Fig. 9 p. 9 | Tabla/CSV, ajuste, residuos y estadística |\n| Sensores 0–39 cm, descensos ~2 cm | pp. 6–10, Figs. 10–11 | Ajustes individuales LI-1/2/3 |\n| Aire: lectura y salida | pp. 6–8, Fig. 8 | FIC-1/2/3 y velocidad superficial jg |\n| INT 0–32767 y 4–20 mA | pp. 2,6–7 | Cadena ideal, cuantización y saturación |\n| Identificación de k′ y θ | pp. 10–12, Fig. 12, Ec. 5 | Escalones, dos puntos, tres ensayos o importación |\n| SIMC | Ecs. 2–6, pp. 8,10 | Calculadora, restricciones y alternativas PI |\n| Modelos y PI finales | Tabla 2 p. 12 | k′=−0.001018; θ=(7,6,3); Kc=(−62,−76,−85); Ti=(56,30,44) |\n| Feedforward | Ecs. 7–8, Fig. 13 p. 12 | Kff=(0.8,0.8,1), diferencia entre muestras |\n| Primer orden | Ec. 4, Ecs. 10–15 p. 14 | Modelo independiente con respuesta analítica |\n| 15 min, 1 s, mediana 10 muestras | p. 13 | Comparación dedicada y filtrado documentado |\n| IAE y resultados publicados | Ec. 9, Fig. 14 p. 13 | Métricas reales/medidas/filtradas y panel experimental separado |\n| Reactivos y tiempos | pp. 4–6,13 | Asistente de nueve etapas |\n\n## Calibración\n\nEcuaciones transcritas de las figuras, con su precisión gráfica publicada:\n\n| Instrumento | Ecuación rotulada | Salida |\n|---|---|---|\n| P-4 | Q=0.0035 N | L/min |\n| P-1 | Q=0.0029 N | L/min |\n| P-2, P-3 | Q=0.0033 N | L/min |\n| LI-1 | h=−0.0018 N+40.1363 | cm |\n| LI-2 | h=−0.0019 N+43.8823 | cm |\n| LI-3 | h=−0.0020 N+41.293 | cm |\n| Aire, lectura | Qair=0.0032 N | L/min |\n| Aire, salida | Qair=0.0031 N | L/min |\n\nN es el valor del registro INT. Los tres controladores de aire se declaran iguales en el artículo, pero los ajustes propios se guardan individualmente. Los coeficientes anteriores están redondeados y no constituyen nuevas mediciones digitalizadas.\n\nPara bombas: Q=60V/Δt con V en L, Δt=10 s por defecto y registros 5000,10000,20000,25000,28000. Se ajustan todas las observaciones, con opción de intercepto libre o cero; se muestran pendiente, intercepto, R² centrado, RMSE, residuos y media/DE muestral por punto (`ddof=1`). Se comprueba el triplicado y se rechazan identificadores repetidos. Sin observaciones, una recta publicada no recibe R² o intervalos inventados.\n\nEl intervalo de predicción OLS 95% usa distribución t y n−p grados de libertad; presupone errores independientes, normales y de varianza constante. En sensores hay error en el eje de registro: OLS es aproximación docente, no certificación metrológica. La leyenda de Fig. 11 dice intercepto fijado en cero, pero las ecuaciones visibles tienen intercepto no nulo: se muestra la contradicción. El rango nominal 0–39 cm no implica validación experimental completa de la figura; las extrapolaciones se advierten.\n\n## Identificación y SIMC\n\nLa planta individual integradora usa dy/dt=k′u(t−θ), en desviaciones respecto al punto inicial. Su entrada se mantiene constante y el escalón modifica la salida; no se aplica recirculación simultánea en este ensayo individual. Hay tres repeticiones sintéticas con ruido de semilla fija, o se importan las repeticiones existentes sin fabricar otras. Si un ensayo geométrico sale de 0–45 cm, se rechaza sin recortar la curva.\n\nk′=(y2−y1)/[(t2−t1)Δu]. La estimación de θ prolonga la recta entre los puntos hasta la mediana de las muestras de los 10 s previos al escalón. Depende de ruido, selección y estabilidad de la línea base; no es un identificador universal. Se marcan retardos extrapolados inválidos y se permite aceptar θ por inspección. El banco usa un retardo entero ≥1 s, redondeado explícitamente.\n\nSIMC: Kc=1/[k′(τc+θ)], Ti=min{τ1,4(τc+θ)}. En el límite integrador τ1→∞ se obtiene Ti=4(τc+θ). También puede explorarse τ1 finito. Se evalúan por separado τc≥θ y Ti≥4(τc+θ), según el texto; una contradicción con la operación min se informa.\n\nTabla 2 se conserva sin cambios. Para celda 3, k′=−0.001018, θ=3 y τc=8 dan Kc≈−89.30 y Ti=44 bajo el límite integrador, mientras la tabla rotula iniciales −78.1 y 52. Los Ti finales de celdas 2 y 3 tampoco cumplen esa cota usando los τc tabulados. Se muestran las diferencias; los finales publicados no se sustituyen por los iniciales. La comparación de τc usa la misma planta en ambos controladores. Guardar/aplicar un PI alternativo es explícito.\n\n## Dos modelos independientes\n\nIntegrador, Tabla 2: dy/dt=k′u(t−θ); con condiciones iniciales nulas en desviaciones, sY=k′e^(−θs)U y G=k′e^(−θs)/s. Un escalón genera rampa después del retardo.\n\nPrimer orden, Ecs. 10–15: τ1 dy/dt=−y+ku(t−θ); τ1sY=−Y+ke^(−θs)U; G=ke^(−θs)/(τ1s+1). Un escalón converge a kΔu. El artículo no proporciona una pareja independiente (k,τ1) validada: en esta comparación son supuestos editables. Elegir k=k′τ1 iguala la pendiente inicial, no toda la respuesta. El primer orden se estudia por separado y no reemplaza el balance conservativo del banco.\n\n## Geometría y discrepancia no resuelta\n\nA=0.09 m²; Vmax=40.5 L; V=0.9h L con h en cm. El balance líquido implica k′=−1/(60×0.9)=−0.0185185 cm/s por L/min. Tabla 2 publica −0.001018, unas 18.19 veces menor. Interpretar esa ganancia como un balance puramente líquido exigiría almacenamiento efectivo 16.37 L/cm o área efectiva ~1.637 m², incompatible con el área geométrica sin escalamiento o física adicional.\n\nSe consultaron la versión editorial, https://pmc.ncbi.nlm.nih.gov/articles/PMC9988547/ y repositorios Imperial/Brunel. La búsqueda por DOI y corrección no aportó una explicación verificable. Error de unidades, calibración o aireación son hipótesis, no hechos implementados. No se modifica arbitrariamente la geometría para forzar coincidencia.\n\nLas alternativas son: geometría publicada, parámetros identificados por usuario y parámetros publicados Tabla 2. La última conserva un inventario efectivo matemático para la conservación; **no representa el volumen físico del equipo**.\n\n## Banco, PI, instrumentación y filtro\n\nV_i[k+1]=V_i[k]+(Qin_i−Qout_i−Qconc_i)/60; V_T[k+1]=V_T[k]+(Qout_3+ΣQconc−Qfeed)/60. Caudales L/min, volúmenes L, tiempo s. Las salidas reales alimentan simultáneamente la siguiente celda y todo concentrado vuelve a T-1. Se impide extraer inventario inexistente y el desborde retorna al tanque. Si T-1 supera 130 L, se detiene sin perder masa por recorte silencioso.\n\nPI: u=Q0+Kc e+I+FF; I[k]=I[k−1]+Kc e[k]/Ti; e=SP−PV. Sesgo Q0, límites editables y anti-windup condicional son decisiones de ingeniería añadidas. No hay límite de velocidad de cambio. FF literal=Kff(Qin[k]−Qin[k−1]), Ecs. 7–8; la opción respecto al caudal inicial sigue marcada como extensión pedagógica.\n\nCadena PLC con ajustes individuales guardados o rectas publicadas: N=round[(I−4)32767/16], I=4+16N/32767; h=aLI N+bLI; NP=(Qorden−bP)/aP; Q=aP NP+bP. Se muestran valores ideales, cuantizados, saturados y escalados. La correspondencia eléctrica lineal es una convención ideal asumida, no emulación de códigos físicos GE. La vista calcula una muestra de PI con integral anterior editable; no se conecta a un PLC. No se inventa la relación bits/rpm a partir del rango 0–600 rpm.\n\nEl banco permite ruido gaussiano reproducible; ambas estrategias usan exactamente la misma realización. Mediana causal de N muestras incluida la actual, con relleno inicial al nivel inicial. Para N par se promedian los dos valores centrales. No se afirma equivalencia exacta con medfilt1 ni sus bordes. Se muestran señales real, medida, filtrada, sus errores y sus IAE trapezoidales; el filtro añade retraso y no garantiza mejorar seguimiento.\n\n## Protocolo de Fig. 14 y alcance\n\nEl ensayo dedicado fija entrada C-1=45 L/min; entradas C-2/C-3 son los relaves previos, 900 s, 1 s y mediana 10. Sus niveles iniciales y escalones de consigna son didácticos, no las series originales. IAE experimentales rotulados, cm·s: C-1 198/164, C-2 325/187, C-3 260/221 para FB/FB+FF, mostrados separadamente. Fig. 14 ilustra cerca de 600 s aunque el texto declara 15 min; no se inventan datos faltantes. Los autores ofrecen originales bajo solicitud. Importar curvas propias o digitalizadas no equivale a validación experimental contra las series de los autores.\n\nConcentrado constante 0.2 L/min por celda, límite 100 L/min, inventario T-1 inicial 100 L, sesgo, ubicación de retardos y lógica de desborde siguen como supuestos editables. No se simulan holdup, cinética de espuma, recuperación mineral, cámaras o DDE. El aire es constante en el banco; calibración y jg son módulos funcionales separados.\n\nLos ajustes se guardan en sesión: calibraciones→PLC; identificación→planta/SIMC; SIMC→PI alternativo. Los parámetros JSON pueden exportarse/restaurarse y los CSV se descargan con manifiesto de procedencia. No hay persistencia remota de mediciones propias. Las pruebas matemáticas y de interfaz se separan de comprobaciones de transcripción; ninguna sustituye validar una planta física."
+      ],
+      "radio_labels": [
+        "Módulo"
+      ],
+      "navigation_options": [
+        "Proceso",
+        "Calibración",
+        "Identificación",
+        "Sintonización SIMC",
+        "Modelos matemáticos",
+        "Instrumentación PLC",
+        "Procedimiento guiado",
+        "Ensayos Feedback",
+        "Ensayos Feedforward",
+        "Comparación experimental",
+        "Filtrado",
+        "Resultados y exportación"
+      ],
+      "errors": []
+    }
+  ],
+  "ok": true
+}
